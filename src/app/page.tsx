@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { DeveloperCore } from "@/components/developer-core";
 import { MotionSection, PageTransition } from "@/components/motion-section";
 import { TechStackShowcase } from "@/components/tech-stack-showcase";
@@ -14,6 +15,7 @@ import {
   GitBranch,
   Server,
   Mail,
+  X,
 } from "lucide-react";
 import {
   SiGithub,
@@ -22,6 +24,7 @@ import {
 } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 
 function SocialLink({
   href,
@@ -51,6 +54,17 @@ function SocialLink({
 }
 
 export default function Home() {
+  const [isAvatarOpen, setIsAvatarOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isAvatarOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsAvatarOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isAvatarOpen]);
+
   return (
     <PageTransition className="space-y-6">
       <section className="grid gap-6 xl:grid-cols-[1fr_480px]">
@@ -65,7 +79,11 @@ export default function Home() {
 
           {/* Developer Profile Header with Avatar Image & Social Icons */}
           <div className="mb-6 flex flex-col md:flex-row items-center gap-6 border-b border-[var(--app-border)] pb-6">
-            <div className="group relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl border-2 border-emerald-500/30 bg-gradient-to-tr from-emerald-500/20 via-cyan-500/10 to-indigo-500/20 p-0.5 transition-all duration-300 hover:border-emerald-500 hover:scale-105 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+            <button
+              onClick={() => setIsAvatarOpen(true)}
+              aria-label="Enlarge profile photo"
+              className="group relative h-24 w-24 shrink-0 cursor-zoom-in overflow-hidden rounded-2xl border-2 border-emerald-500/30 bg-gradient-to-tr from-emerald-500/20 via-cyan-500/10 to-indigo-500/20 p-0.5 transition-all duration-300 hover:border-emerald-500 hover:scale-105 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--app-bg)]"
+            >
               <div className="h-full w-full overflow-hidden rounded-[14px] bg-[var(--app-bg)]">
                 <img
                   src="/profile.png"
@@ -87,7 +105,7 @@ export default function Home() {
               <div className="absolute -bottom-1 -right-1 h-5 w-5 rounded-full border-4 border-[var(--app-card)] bg-emerald-500 flex items-center justify-center">
                 <span className="absolute h-3 w-3 rounded-full bg-emerald-500 animate-ping opacity-75"></span>
               </div>
-            </div>
+            </button>
             
             <div className="text-center md:text-left flex-1 min-w-0">
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
@@ -177,6 +195,59 @@ export default function Home() {
           );
         })}
       </MotionSection>
+
+      <AnimatePresence>
+        {isAvatarOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[10000] flex items-center justify-center bg-[#020205]/90 backdrop-blur-md p-4"
+            onClick={() => setIsAvatarOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 15 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 15 }}
+              transition={{ type: "spring", damping: 25, stiffness: 350 }}
+              className="relative max-w-[420px] w-full aspect-square rounded-3xl border border-[var(--app-border)] bg-[color-mix(in_srgb,var(--app-bg)_80%,transparent)] p-2 shadow-[0_0_50px_rgba(16,185,129,0.15)] md:p-3 overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Decorative background glow */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 via-cyan-500/5 to-indigo-500/10 opacity-60 pointer-events-none" />
+              
+              <div className="relative h-full w-full overflow-hidden rounded-[18px] border border-emerald-500/20 bg-black/40">
+                <img
+                  src="/profile.png"
+                  alt="Nurul Shaikh Full size"
+                  className="h-full w-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const fallback = document.getElementById('modal-avatar-fallback');
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <div
+                  id="modal-avatar-fallback"
+                  className="hidden h-full w-full flex-col items-center justify-center bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-indigo-500/20 text-5xl font-bold text-emerald-400"
+                >
+                  NS
+                </div>
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={() => setIsAvatarOpen(false)}
+                className="absolute top-4 right-4 z-50 rounded-full border border-[var(--app-border)] bg-black/60 backdrop-blur-md p-2 text-[var(--app-text)] transition-all duration-300 hover:border-emerald-500/50 hover:text-emerald-500 hover:scale-110 active:scale-95 shadow-lg"
+                aria-label="Close modal"
+              >
+                <X className="size-4" />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </PageTransition>
   );
 }

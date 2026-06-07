@@ -15,14 +15,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nurul OS v1.0 - Full Stack Developer",
+    default: "Nurul OS v1.0 - Developer",
     template: "%s | Nurul OS"
   },
   description:
-    "A premium, SaaS-style personal operating system and portfolio showcase for Nurul Shaikh, Full Stack Developer. Highlighting expertise in Node.js, React, and systems architecture.",
+    "A premium, SaaS-style personal operating system and portfolio showcase for Nurul Shaikh, Developer. Highlighting expertise in Node.js, React, and systems architecture.",
   keywords: [
     "Nurul Shaikh",
-    "Full Stack Developer",
+    "Developer",
     "Node.js Developer",
     "React Developer",
     "MongoDB",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Nurul Shaikh", url: "https://github.com/Dev-Nurul08" }],
   creator: "Nurul Shaikh",
   openGraph: {
-    title: "Nurul OS v1.0 - Full Stack Developer Portfolio",
+    title: "Nurul OS v1.0 - Developer Portfolio",
     description: "Explore the personal operating system and development works of Nurul Shaikh.",
     url: "http://localhost:3001",
     siteName: "Nurul OS",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nurul OS v1.0 - Full Stack Developer",
+    title: "Nurul OS v1.0 - Developer",
     description: "Explore the personal operating system and development works of Nurul Shaikh.",
     creator: "@Dev_Nurul08"
   },
