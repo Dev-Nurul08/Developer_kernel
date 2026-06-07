@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --app-bg: #ffffff;
+  --app-card: #f8fafc;
+  --app-border: #e2e8f0;
+  --app-text: #0f172a;
+  --app-muted: #475569;
+  --app-soft: #64748b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #f8fafc;
+  --app-bg: #000000;
+  --app-card: #09090b;
+  --app-border: #18181b;
+  --app-text: #f8fafc;
+  --app-muted: #a1a1aa;
+  --app-soft: #71717a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: #10b981;
+  color: #020617;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PREMIUM SCROLLBAR DESIGN (Webkit & Firefox)
+   ═══════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--app-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--app-border);
+  border-radius: 999px;
+  border: 2px solid var(--app-bg);
+  transition: background-color 200ms ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--app-soft);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #10b981;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--app-border) var(--app-bg);
+}
+
+/* ═══════════════════════════════════════════════════════
+   HOVER & ANIMATION UTILITIES
+   ═══════════════════════════════════════════════════════ */
+.lift-card {
+  transform: translateY(0);
+  transition:
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lift-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--app-border) 40%, #10b981);
+  box-shadow: 
+    0 12px 30px -10px rgba(0, 0, 0, 0.4),
+    0 0 20px -5px rgba(16, 185, 129, 0.1);
+}
+
+.button-scale {
+  transition:
+    transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.button-scale:hover {
+  transform: scale(1.025);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button-scale:active {
+  transform: scale(0.975);
+}
+
+.glass-panel {
+  border: 1px solid var(--app-border);
+  background: color-mix(in srgb, var(--app-card) 68%, transparent);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  transition: 
+    border-color 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: color-mix(in srgb, var(--app-border) 60%, #10b981);
+}
+
+.glass-tile {
+  border: 1px solid var(--app-border);
+  background: color-mix(in srgb, var(--app-card) 64%, transparent);
+  backdrop-filter: blur(16px);
+  transition: border-color 200ms ease;
+}
+
+.status-dot {
+  position: relative;
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #10b981;
+}
+
+.status-dot::after {
+  position: absolute;
+  inset: -5px;
+  content: "";
+  border-radius: inherit;
+  border: 1px solid rgb(16 185 129 / 55%);
+  animation: status-pulse 1.8s ease-out infinite;
+}
+
+@keyframes status-pulse {
+  from {
+    opacity: 0.8;
+    transform: scale(0.75);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+/* Scroll spying offsets for one-page layout navigation */
+section[id] {
+  scroll-margin-top: 80px;
+}
