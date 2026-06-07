@@ -10,15 +10,15 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
   const [fadeExit, setFadeExit] = useState(false);
 
   useEffect(() => {
-    // Start fading out the loader overlay slightly before 5 seconds
+    // Start fading out the loader overlay immediately after the name animation completes (3 seconds)
     const fadeTimer = setTimeout(() => {
       setFadeExit(true);
-    }, 4500);
+    }, 3000);
 
-    // Call onComplete at exactly 5 seconds to reveal the page content
+    // Call onComplete after the 0.5s fade exit transition (3.5 seconds total)
     const completeTimer = setTimeout(() => {
       onComplete();
-    }, 5000);
+    }, 3500);
 
     return () => {
       clearTimeout(fadeTimer);
@@ -110,7 +110,7 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
           font-size: 11vw;
         }
 
-        /* Reveal mask (sweeping clip box) using clip-path for GPU-acceleration */
+        /* Reveal mask (sweeping clip box) using sliding transform */
         .reveal-mask {
           position: absolute;
           top: 0;
@@ -118,10 +118,9 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
           width: 100%;
           height: 100%;
           overflow: hidden;
-          
-          /* Hardware accelerated reveal clip-path */
-          clip-path: inset(0 100% 0 0);
-          animation: clipSweep 2.5s cubic-bezier(0.25, 1, 0.35, 1) forwards;
+          will-change: transform;
+          transform: translate3d(-100%, 0, 0);
+          animation: maskSweep 3.0s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
         }
 
         /* Highlighted reveal layer containing the filled text with glow */
@@ -138,22 +137,36 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
           white-space: nowrap;
           user-select: none;
           filter: drop-shadow(0 0 12px var(--accent-color-glow-heavy));
-          
           font-size: 11vw;
+          will-change: transform;
+          transform: translate3d(100%, 0, 0);
+          animation: contentSweep 3.0s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
         }
 
-        /* Dedicated GPU-friendly sweep line (wave of light) */
-        .sweep-line {
+        /* Dedicated GPU-friendly sweep line container (wave of light) */
+        .sweep-line-container {
           position: absolute;
           top: -2%;
           bottom: -2%;
+          left: 0;
+          width: 100%;
+          pointer-events: none;
+          z-index: 10;
+          will-change: transform;
+          transform: translate3d(0, 0, 0);
+          animation: lineSweep 3.0s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+        }
+
+        .sweep-line {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
           width: 3px;
           background: var(--accent-color);
           box-shadow: 
             0 0 15px var(--accent-color),
             0 0 25px var(--accent-color-dark);
-          z-index: 10;
-          animation: lineSweep 2.5s cubic-bezier(0.25, 1, 0.35, 1) forwards;
         }
 
         @media (min-width: 768px) {
@@ -177,12 +190,30 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
           }
         }
 
-        @keyframes lineSweep {
+        @keyframes maskSweep {
           0% {
-            left: 0%;
+            transform: translate3d(-100%, 0, 0);
           }
           100% {
-            left: 100%;
+            transform: translate3d(0%, 0, 0);
+          }
+        }
+
+        @keyframes contentSweep {
+          0% {
+            transform: translate3d(100%, 0, 0);
+          }
+          100% {
+            transform: translate3d(0%, 0, 0);
+          }
+        }
+
+        @keyframes lineSweep {
+          0% {
+            transform: translate3d(0, 0, 0);
+          }
+          100% {
+            transform: translate3d(100%, 0, 0);
           }
         }
 
@@ -203,7 +234,7 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
           width: 0%;
           background: var(--accent-color-dark);
           border-radius: inherit;
-          animation: progressLoad 4s cubic-bezier(0.25, 1, 0.35, 1) forwards;
+          animation: progressLoad 3.0s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
           box-shadow: 0 0 8px var(--accent-color-glow);
         }
 
@@ -253,8 +284,10 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
             </div>
           </div>
 
-          {/* Sweep line (wave of light) */}
-          <div className="sweep-line"></div>
+          {/* Sweep line container and element (wave of light) */}
+          <div className="sweep-line-container">
+            <div className="sweep-line"></div>
+          </div>
         </div>
 
         <p className="loader-subtitle">Personal Operating System v1.0</p>
