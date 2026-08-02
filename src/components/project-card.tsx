@@ -49,21 +49,25 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="mt-5 flex flex-wrap gap-2">
-        <Link
-          href={project.liveUrl}
-          className="button-scale inline-flex h-10 items-center gap-2 rounded-lg border border-[var(--app-border)] bg-[color-mix(in_srgb,var(--app-bg)_70%,transparent)] backdrop-blur-sm px-3 text-sm font-semibold hover:border-emerald-500/40 hover:text-emerald-500"
-        >
-          <ExternalLink className="size-4" aria-hidden="true" />
-          View
-        </Link>
+        {project.liveUrl && project.liveUrl.startsWith("http") && (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="button-scale inline-flex h-10 items-center gap-2 rounded-lg border border-[var(--app-border)] bg-[color-mix(in_srgb,var(--app-bg)_70%,transparent)] backdrop-blur-sm px-3 text-sm font-semibold hover:border-emerald-500/40 hover:text-emerald-500"
+          >
+            <ExternalLink className="size-4" aria-hidden="true" />
+            Live Demo
+          </a>
+        )}
         <a
-          href={systemProfile.socials.github}
+          href={project.githubUrl || systemProfile.socials.github}
           target="_blank"
           rel="noreferrer"
           className="button-scale inline-flex h-10 items-center gap-2 rounded-lg border border-[var(--app-border)] bg-[color-mix(in_srgb,var(--app-bg)_70%,transparent)] backdrop-blur-sm px-3 text-sm font-semibold hover:border-emerald-500/40 hover:text-emerald-500"
         >
           <GitBranch className="size-4" aria-hidden="true" />
-          Github
+          GitHub
         </a>
         <Link
           href={`/projects/${project.slug}`}

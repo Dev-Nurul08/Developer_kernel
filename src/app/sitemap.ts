@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { projects } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "http://localhost:3001"; // Default dev server URL, normally replaced in production
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://github.com/Dev-Nurul08";
 
   const routes = [
     "",

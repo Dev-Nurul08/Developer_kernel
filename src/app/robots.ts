@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "http://localhost:3001"; // Default dev server URL, normally replaced in production
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://github.com/Dev-Nurul08";
 
   return {
     rules: {
