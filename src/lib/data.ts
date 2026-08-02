@@ -816,27 +816,38 @@ export const experienceTimeline = [
   },
   {
     year: "2025",
-    title: "Started Backend",
-    detail: "Started learning backend development, structuring APIs and designing databases.",
+    title: "Started Backend & Systems Architecture",
+    detail: "Started learning backend development, structuring APIs, database normalization, and state pattern design.",
   },
   {
     year: "Mid 2025",
-    title: "Freelance Developer",
-    detail: "Completed freelance web solutions and utilities development for Kail Logistics.",
+    title: "Freelance Full-Stack Developer",
+    detail: "Completed freelance web solutions, logistical portals, and software utilities for Kail Logistics.",
+  },
+  {
+    year: "June 2026 – August 2026",
+    title: "Software Developer Intern — Yuga Yatra Retail (OPC) Private Limited",
+    detail:
+      "Completed official 2-month engineering internship (Intern ID: 280400868). Contributed to full-stack web applications, designed modular REST endpoints, optimized UI workflows, and collaborated under Founder & CEO Debashish Kumar.",
   },
   {
     year: "2026",
-    title: "Building Real Projects",
-    detail: "Shipping SaaS-style interfaces, backend APIs, and production-minded systems.",
-  },
-  {
-    year: "June 2026",
-    title: "Software Engineer Intern",
-    detail: "Currently doing an internship at Yuga Yatra, building and shipping production code.",
+    title: "Building Enterprise SaaS Systems",
+    detail: "Shipping 3D WebGL configurators, agentic AI lead engines, and production-minded full-stack products.",
   },
 ];
 
 export const certificates = [
+  {
+    category: "Internship",
+    title: "Software Developer Intern Certificate",
+    issuer: "Yuga Yatra Retail (OPC) Private Limited",
+    date: "01 June 2026 - 01 August 2026",
+    internId: "280400868",
+    ceo: "Debashish Kumar (Founder & CEO)",
+    summary:
+      "Official Certificate of Internship completion awarded to Mr. Nurul Shaikh for completing his Software Developer Internship from June 01, 2026 to August 01, 2026 at Yuga Yatra Retail (OPC) Private Limited. Recognized for outstanding contributions to software development and full-stack web engineering.",
+  },
   {
     category: "Full Stack",
     title: "Full Stack Development",
@@ -882,13 +893,13 @@ export const certificates = [
 ];
 
 export const resumeOverview = {
-  education: "Diploma student focused on full-stack software development.",
-  skills: "JavaScript, React, Node.js, Express, MongoDB, MySQL, Tailwind CSS, Git.",
-  projects: "SaaS dashboards, REST APIs, booking flows, ticket systems, and learning tools.",
+  education: "Diploma in Computer Science student focused on full-stack software architecture.",
+  skills: "JavaScript, Python, React, Three.js, Node.js, FastAPI, Express, MongoDB, MySQL, Tailwind CSS, Git.",
+  projects: "MiniShop 3D, LeadForge AI, Solaris 3D Configurator, SuryaPura Gram Portal, SitBlitz, DevDesk API.",
   experience:
-    "Hands-on project experience across frontend UI, backend architecture, and database design.",
+    "Software Developer Intern at Yuga Yatra Retail (OPC) Private Limited (Intern ID: 280400868) + Freelance Full-Stack Engineering.",
   achievements:
-    "Built portfolio-ready systems with documented architecture, API structure, and product metrics.",
+    "Awarded official Yuga Yatra Internship Certificate; architected 60-120 FPS 3D WebGL engines and multi-agent AI lead systems.",
 };
 
 export function getProjectBySlug(slug: string) {

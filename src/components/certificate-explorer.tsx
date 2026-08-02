@@ -45,36 +45,68 @@ export function CertificateExplorer() {
       <div className="glass-panel rounded-lg">
         <div className="flex items-center justify-between border-b border-[var(--app-border)] px-5 py-4">
           <div>
-            <p className="text-xs text-[var(--app-muted)]">Preview</p>
+            <p className="text-xs text-[var(--app-muted)]">Verified Credential Document</p>
             <h2 className="text-lg font-semibold text-[var(--app-text)]">{selected.title}</h2>
           </div>
-          <ShieldCheck className="size-5 text-emerald-500" aria-hidden="true" />
+          <div className="flex items-center gap-2">
+            <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-semibold text-emerald-400">
+              VERIFIED
+            </span>
+            <ShieldCheck className="size-5 text-emerald-500" aria-hidden="true" />
+          </div>
         </div>
 
         <div className="p-5">
-          <div className="min-h-[360px] rounded-lg border border-[var(--app-border)] bg-[color-mix(in_srgb,var(--app-bg)_50%,transparent)] backdrop-blur-sm p-6">
-            <div className="mb-12 flex items-start justify-between gap-4">
+          <div className="relative min-h-[380px] rounded-xl border-2 border-amber-500/40 bg-gradient-to-b from-amber-950/20 via-[color-mix(in_srgb,var(--app-bg)_90%,transparent)] to-[var(--app-bg)] p-6 sm:p-8 shadow-xl overflow-hidden">
+            {/* Decorative Gold Header Bar */}
+            <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600" />
+            
+            <div className="mb-6 flex flex-wrap items-start justify-between gap-4 border-b border-[var(--app-border)] pb-5">
               <div>
-                <p className="text-sm text-[var(--app-muted)]">{selected.issuer}</p>
-                <h3 className="mt-2 text-2xl font-semibold text-[var(--app-text)]">{selected.title}</h3>
+                <p className="text-xs font-bold uppercase tracking-widest text-amber-400">{selected.issuer}</p>
+                <h3 className="mt-1 text-2xl font-bold tracking-tight text-[var(--app-text)]">{selected.title}</h3>
+                {selected.internId && (
+                  <span className="mt-2 inline-flex items-center gap-1.5 rounded border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 font-mono text-xs font-semibold text-amber-300">
+                    INTERN ID: {selected.internId}
+                  </span>
+                )}
               </div>
-              <span className="rounded-md border border-[var(--app-border)] px-3 py-1 text-sm bg-[color-mix(in_srgb,var(--app-bg)_40%,transparent)] backdrop-blur-sm">
+              <span className="rounded-md border border-amber-500/40 bg-amber-500/10 px-3 py-1 font-mono text-xs font-semibold text-amber-300">
                 {selected.date}
               </span>
             </div>
 
-            <p className="max-w-2xl text-sm leading-7 text-[var(--app-muted)]">
-              {selected.summary}
-            </p>
+            <div className="space-y-4">
+              <p className="max-w-2xl text-sm leading-7 text-[var(--app-text)] font-medium">
+                {selected.summary}
+              </p>
 
-            <div className="mt-10 grid gap-3 sm:grid-cols-3">
-              {["Credential", "Verified", "Portfolio Ready"].map((label) => (
+              {selected.category === "Internship" && (
+                <div className="mt-6 rounded-lg border border-amber-500/30 bg-amber-500/5 p-4 text-xs space-y-2">
+                  <div className="flex items-center justify-between text-zinc-300 font-semibold border-b border-amber-500/20 pb-2">
+                    <span>Recipients: <strong className="text-white">Mr. Nurul Shaikh</strong></span>
+                    <span>Role: <strong className="text-emerald-400">Software Developer Intern</strong></span>
+                  </div>
+                  <div className="flex items-center justify-between text-zinc-400 pt-1">
+                    <span>Period: 01st June, 2026 to 01st August, 2026</span>
+                    <span className="font-mono text-amber-400">Signed by: Debashish Kumar (Founder & CEO)</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              {[
+                ["Credential Status", "Active & Verified"],
+                ["Issued By", selected.issuer],
+                ["Portfolio Link", "Authentic Record"],
+              ].map(([label, val]) => (
                 <div
                   key={label}
-                  className="lift-card glass-tile rounded-lg p-4 hover:border-emerald-500/30"
+                  className="lift-card rounded-lg border border-[var(--app-border)] bg-[var(--app-card)] p-3.5 hover:border-amber-500/40 transition-colors"
                 >
-                  <p className="text-xs text-[var(--app-muted)]">{label}</p>
-                  <p className="mt-2 text-sm font-semibold text-emerald-500">Active</p>
+                  <p className="text-[11px] font-semibold text-[var(--app-muted)] uppercase tracking-wider">{label}</p>
+                  <p className="mt-1 text-xs font-bold text-amber-400 truncate">{val}</p>
                 </div>
               ))}
             </div>
