@@ -895,13 +895,121 @@ export const certificates = [
 ];
 
 export const resumeOverview = {
-  education: "Diploma in Computer Science student focused on full-stack software architecture.",
-  skills: "JavaScript, Python, React, Three.js, Node.js, FastAPI, Express, MongoDB, MySQL, Tailwind CSS, Git.",
-  projects: "MiniShop 3D, LeadForge AI, Solaris 3D Configurator, SuryaPura Gram Portal, SitBlitz, DevDesk API.",
+  summary:
+    "Results-driven Web Developer with 1+ year of professional experience building scalable REST APIs, integrating databases, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects including rishtawala.com and sevika.in.",
+  education:
+    "Diploma in Computer Science Engineering (Government Polytechnic / Technical Institute · Gujarat Board of Technical Education GBTE, 2024–2027 Final Year).",
+  skills:
+    "Server-Side (Node.js, Express, FastAPI), Frontend (React 19, Three.js, WebGL, Tailwind), Databases (MongoDB, MySQL, SQLite), AI Tools (Claude Code, Cursor, Aider).",
   experience:
-    "Software Developer Intern at Yuga Yatra Retail (OPC) Private Limited (Intern ID: 280400868) + Freelance Full-Stack Engineering.",
+    "Freelance Full-Stack Developer (2025–2026) + Web Developer Intern at Yuga Yatra (Jun 1 – Aug 1, 2025).",
   achievements:
-    "Awarded official Yuga Yatra Internship Certificate; architected 60-120 FPS 3D WebGL engines and multi-agent AI lead systems.",
+    "Shipped 3D WebGL E-Commerce, AI Agentic B2B pipelines, and rural governance platforms serving 10,000+ citizens solo.",
+};
+
+export const resumeDetails = {
+  header: {
+    name: "Nurul Shaikh",
+    title: "WEB DEVELOPER · FREELANCE & REMOTE",
+    portfolio: "nurulos.vercel.app",
+    email: "shaikhnurul8200@gmail.com",
+    phone: "+91 9274490242",
+    linkedin: "linkedin.com/in/nurul-shaikh",
+    github: "github.com/Dev-Nurul08",
+    location: "Navsari, Gujarat, India",
+  },
+  summary:
+    "Results-driven Web Developer with 1+ year of professional experience building scalable REST APIs, integrating databases, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects. Builds full-stack applications spanning AI-agentic pipelines, 3D WebGL interfaces, and rural governance portals. Actively uses AI-powered IDEs — Claude Code, Cursor, and Aider — to accelerate development velocity, reduce boilerplate, and ship higher-quality code in less time. Open to remote freelance contracts and long-term engagements.",
+  technicalSkills: [
+    {
+      category: "Server-Side",
+      skills: ["Node.js", "Express.js", "FastAPI (Python)", "REST API Design", "MVC Architecture"],
+    },
+    {
+      category: "Frontend",
+      skills: ["React 19", "Three.js", "WebGL", "Tailwind CSS", "Vite", "HTML5", "CSS3"],
+    },
+    {
+      category: "Databases",
+      skills: ["MongoDB", "Mongoose", "MySQL", "PostgreSQL", "SQLite", "aiosqlite"],
+    },
+    {
+      category: "Authentication",
+      skills: ["JWT", "OAuth 2.0", "bcrypt", "RBAC", "Session Management", "Cookie Auth"],
+    },
+    {
+      category: "AI & Automation",
+      skills: ["Anthropic Claude API", "Playwright Stealth", "SSE Streaming", "Agent Pipelines"],
+    },
+    {
+      category: "Dev Tools",
+      skills: ["Git", "GitHub", "Postman", "npm", "Docker Basics", "VS Code", "Linux/Ubuntu"],
+    },
+    {
+      category: "AI-Powered IDEs",
+      skills: ["Claude Code", "Cursor", "Aider"],
+    },
+    {
+      category: "Other",
+      skills: ["GoF Design Patterns", "PWA", "jsPDF", "Chart.js", "Pydantic", "JSON", "API Docs"],
+    },
+  ],
+  workExperience: [
+    {
+      company: "Freelance Web Developer",
+      role: "Self-Employed",
+      location: "Remote / WFH",
+      period: "2025 – 2026",
+      bullets: [
+        "Built and deployed web systems for independent clients — REST APIs, admin dashboards, auth modules, and database-driven applications using Node.js, Express.js, and MongoDB/MySQL.",
+        "Integrated third-party services including payment gateways, SMS/email APIs, and cloud storage into production applications.",
+        "Engineered full-stack products spanning 3D WebGL e-commerce, AI-agentic B2B lead pipelines, and civic government portals — each shipped solo from architecture through deployment.",
+        "Leveraged Claude Code, Cursor, and Aider as AI coding assistants to reduce average feature development time by ~35%, while maintaining full code ownership and review.",
+        "Managed client scoping, async communication, sprint planning, and on-time delivery across concurrent projects.",
+      ],
+    },
+    {
+      company: "Yuga Yatra",
+      role: "Web Developer — Intern",
+      location: "Gujarat, India (Remote)",
+      period: "Jun 1 – Aug 1, 2025",
+      bullets: [
+        "Contributed to building and launching rishtawala.com and sevika.in — developing responsive, user-facing UI components and integrating them with REST APIs in a live production environment.",
+        "Built and consumed REST APIs for key features including user registration, profile management, and dynamic content rendering across both platforms.",
+        "Developed pixel-perfect, mobile-responsive frontend interfaces using HTML, CSS, JavaScript, and React — coordinating closely with the Project Manager to meet design specs and delivery timelines.",
+        "Worked directly under the Project Manager to understand requirements, break down tasks, and deliver features on schedule across multiple concurrent projects.",
+        "Handled both frontend UI development and API integration work — ensuring smooth data flow between server responses and the user interface.",
+        "Used AI tools (Claude Code, Cursor) to speed up component scaffolding and UI development, reducing repetitive coding tasks by ~30%.",
+      ],
+    },
+  ],
+  education: {
+    degree: "Diploma in Computer Science Engineering",
+    institution: "Government Polytechnic / Technical Institute · Gujarat, India",
+    board: "Gujarat Board of Technical Education (GBTE)",
+    period: "2024 – 2027 (Final Year)",
+    note: "Currently in final year (2026). Expected completion: 2027. Relevant coursework: Data Structures, DBMS, Web Technologies, Computer Networks, OOP, Software Engineering.",
+  },
+  aiWorkflow: [
+    {
+      tool: "Claude Code",
+      description: "Terminal-based AI coding agent for scaffolding projects, multi-file refactoring, and generating complex logic — used daily across all projects.",
+    },
+    {
+      tool: "Cursor",
+      description: "AI-native IDE with codebase-aware autocomplete and inline chat for rapid feature development and real-time debugging sessions.",
+    },
+    {
+      tool: "Aider",
+      description: "CLI-based AI pair programmer for Git-integrated multi-file code changes, PR drafting, and architectural refactors without leaving the terminal.",
+    },
+  ],
+  softSkills: [
+    { name: "Remote Ready", detail: "Strong async communicator — experienced with distributed, WFH-first teams." },
+    { name: "Problem Solving", detail: "Detail-oriented; prioritizes clean, maintainable, documented code." },
+    { name: "Deadline Focused", detail: "Consistent on-time delivery; proactively flags blockers early." },
+    { name: "Self-Driven", detail: "Comfortable owning projects solo from architecture to deployment." },
+  ],
 };
 
 export function getProjectBySlug(slug: string) {
