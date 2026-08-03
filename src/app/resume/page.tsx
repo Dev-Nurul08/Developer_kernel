@@ -293,6 +293,26 @@ export default function ResumePage() {
                   Signatories: {cert.ceo}
                 </p>
               )}
+
+              <div className="pt-2 border-t border-[var(--app-border)] flex items-center justify-between gap-2 mt-2">
+                {'internId' in cert && cert.internId ? (
+                  <span className="text-[10px] font-mono font-semibold text-amber-300">INTERN ID: {cert.internId}</span>
+                ) : 'credentialId' in cert && cert.credentialId ? (
+                  <span className="text-[10px] font-mono font-semibold text-emerald-400">CREDENTIAL ID: {cert.credentialId}</span>
+                ) : <span />}
+
+                {cert.downloadUrl && (
+                  <a
+                    href={cert.downloadUrl}
+                    download={`${cert.title.replace(/[^a-zA-Z0-9]/g, "_")}.svg`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 rounded bg-emerald-500/10 border border-emerald-500/30 px-2 py-1 text-[11px] font-bold text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 transition-colors"
+                  >
+                    <Download className="size-3" /> Download Cert
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>

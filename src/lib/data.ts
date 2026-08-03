@@ -847,46 +847,56 @@ export const certificates = [
     ceo: "Debashish Kumar (Founder & CEO)",
     summary:
       "Official Certificate of Internship completion awarded to Mr. Nurul Shaikh for completing his Software Developer Internship from June 01, 2026 to August 01, 2026 at Yuga Yatra Retail (OPC) Private Limited. Recognized for outstanding contributions to software development and full-stack web engineering.",
-  },
-  {
-    category: "AI & Automation",
-    title: "AI Tools & ChatGPT Workshop",
-    issuer: "be10x (Verified)",
-    date: "November 2nd, 2025",
-    internId: "BE10X-AI-2025",
-    ceo: "Aditya Goenka & Aditya Kachave (Co-founders)",
-    summary:
-      "Awarded for successful completion of AI tools and ChatGPT workshop. Mastered creating AI presentations in under 5 min, analyzing complex datasets using AI in under 30 min, and rapid AI-assisted code generation & debugging in under 10 min.",
-  },
-  {
-    category: "Tech Innovation",
-    title: "Tech Summit 2025 Certificate of Participation",
-    issuer: "Tech Summit 2025 (Surat)",
-    date: "October 4th, 2025",
-    internId: "TSH25008",
-    ceo: "Sardar Patel Smruti Bhavan, Surat",
-    summary:
-      "Awarded Certificate ID TSH25008 in recognition of active participation and valuable contribution towards fostering innovation, collaboration, and growth in the technology ecosystem at Tech Summit 2025 held at Sardar Patel Smruti Bhavan, Surat.",
-  },
-  {
-    category: "Web Development",
-    title: "Certificate of Excellence — HTML & CSS",
-    issuer: "thingQbator (Cisco CSR) & NASSCOM Foundation",
-    date: "2025",
-    internId: "CISCO-NASSCOM-2025",
-    ceo: "Jyoti Sharma (CEO, Nasscom) & R.K. Behera (Chief Mentor)",
-    summary:
-      "Certificate of Excellence awarded for successfully completing the HTML & CSS engineering curriculum as part of the Cisco CSR thingQbator program in partnership with NASSCOM Foundation and Zikshaa.",
+    image: "/certificates/yuga-yatra-internship.svg",
+    downloadUrl: "/certificates/yuga-yatra-internship.svg",
   },
   {
     category: "GenAI Engineering",
     title: "Gen AI Engineering Mastermind — Certificate of Completion",
     issuer: "Outskill",
     date: "Verified Completion",
-    internId: "OUTSKILL-GENAI-MASTERMIND",
+    credentialId: "OUTSKILL-GENAI-MASTERMIND",
     ceo: "Vaibhav Sisinty (Founder, Outskill) • Ramanathan (Data Scientist at SLK) • Vishnuvardhan BKM (AI Researcher at Silival)",
     summary:
       "Official Certificate of Completion proudly presented to Nurul Shaikh for successfully completing Gen AI Engineering Mastermind by Outskill. Certified and signed by Vaibhav Sisinty (Founder, Outskill), Ramanathan (Data Scientist at SLK), and Vishnuvardhan BKM (AI Researcher at Silival). Demonstrates expertise in Generative AI engineering fundamentals, prompt design, multi-agent workflows, and LLM-driven software architecture.",
+    image: "/certificates/outskill-genai-mastermind.svg",
+    downloadUrl: "/certificates/outskill-genai-mastermind.svg",
+  },
+  {
+    category: "AI & Automation",
+    title: "AI Tools & ChatGPT Workshop",
+    issuer: "be10x (Verified)",
+    date: "November 2nd, 2025",
+    credentialId: "BE10X-AI-2025",
+    ceo: "Aditya Goenka & Aditya Kachave (Co-founders)",
+    summary:
+      "Awarded for successful completion of AI tools and ChatGPT workshop. Mastered creating AI presentations in under 5 min, analyzing complex datasets using AI in under 30 min, and rapid AI-assisted code generation & debugging in under 10 min.",
+    image: "/certificates/be10x-ai-tools.svg",
+    downloadUrl: "/certificates/be10x-ai-tools.svg",
+  },
+  {
+    category: "Tech Innovation",
+    title: "Tech Summit 2025 Certificate of Participation",
+    issuer: "Tech Summit 2025 (Surat)",
+    date: "October 4th, 2025",
+    credentialId: "TSH25008",
+    ceo: "Sardar Patel Smruti Bhavan, Surat",
+    summary:
+      "Awarded Certificate ID TSH25008 in recognition of active participation and valuable contribution towards fostering innovation, collaboration, and growth in the technology ecosystem at Tech Summit 2025 held at Sardar Patel Smruti Bhavan, Surat.",
+    image: "/certificates/tech-summit-surat.svg",
+    downloadUrl: "/certificates/tech-summit-surat.svg",
+  },
+  {
+    category: "Web Development",
+    title: "Certificate of Excellence — HTML & CSS",
+    issuer: "thingQbator (Cisco CSR) & NASSCOM Foundation",
+    date: "2025",
+    credentialId: "CISCO-NASSCOM-2025",
+    ceo: "Jyoti Sharma (CEO, Nasscom) & R.K. Behera (Chief Mentor)",
+    summary:
+      "Certificate of Excellence awarded for successfully completing the HTML & CSS engineering curriculum as part of the Cisco CSR thingQbator program in partnership with NASSCOM Foundation and Zikshaa.",
+    image: "/certificates/cisco-nasscom-html-css.svg",
+    downloadUrl: "/certificates/cisco-nasscom-html-css.svg",
   },
   {
     category: "Leadership & Soft Skills",
@@ -894,6 +904,8 @@ export const certificates = [
     issuer: "IPDC",
     date: "2025",
     summary: "Emotional intelligence, effective communication, collaboration, stress management, personal growth, and team leadership.",
+    image: "/certificates/ipdc-leadership.svg",
+    downloadUrl: "/certificates/ipdc-leadership.svg",
   },
 ];
 

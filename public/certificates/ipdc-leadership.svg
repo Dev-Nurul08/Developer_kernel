@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&amp;display=swap');
+      .title { font-family: 'Inter', sans-serif; font-size: 42px; font-weight: 800; fill: #1e3a8a; }
+      .name { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 700; fill: #2563eb; }
+      .sub { font-family: 'Inter', sans-serif; font-size: 18px; fill: #475569; }
+      .body { font-family: 'Inter', sans-serif; font-size: 16px; fill: #334155; }
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  <rect x="30" y="30" width="1140" height="740" fill="#ffffff" rx="8" stroke="#cbd5e1" stroke-width="2"/>
+  <g transform="translate(600, 150)" text-anchor="middle">
+    <text font-family="Inter" font-size="22" font-weight="800" fill="#1e3a8a" letter-spacing="3">INTEGRATED PERSONALITY DEVELOPMENT COURSE</text>
+    <text class="title" y="60">CERTIFICATE OF LEADERSHIP &amp; SOFT SKILLS</text>
+  </g>
+  <g transform="translate(600, 320)" text-anchor="middle">
+    <text class="sub">Awarded to</text>
+    <text class="name" y="55">Nurul Shaikh</text>
+  </g>
+  <g transform="translate(600, 470)" text-anchor="middle">
+    <text class="body">For successful training in emotional intelligence, effective communication, team collaboration,</text>
+    <text class="body" y="30">stress management, personal growth, and professional workplace leadership.</text>
+  </g>
+  <g transform="translate(600, 660)" text-anchor="middle">
+    <text font-family="Inter" font-size="16" font-weight="700" fill="#1e3a8a">IPDC Academic Council</text>
+    <text font-family="Inter" font-size="13" fill="#64748b" y="20">Verified Leadership Credential</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap');
+      .title { font-family: 'Inter', sans-serif; font-size: 42px; font-weight: 800; fill: #005073; }
+      .name { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 700; fill: #00bceb; }
+      .sub { font-family: 'Inter', sans-serif; font-size: 18px; fill: #585656; }
+      .body { font-family: 'Inter', sans-serif; font-size: 16px; fill: #333333; }
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="#f4f7f9"/>
+  <rect x="30" y="30" width="1140" height="740" fill="#ffffff" stroke="#e1e8ed" stroke-width="2" rx="8"/>
+  <g transform="translate(80, 90)">
+    <text font-family="Inter" font-size="24" font-weight="800" fill="#005073">thingQbator <tspan fill="#00bceb">Cisco CSR</tspan></text>
+    <text x="1040" y="0" text-anchor="end" font-family="Inter" font-size="18" font-weight="700" fill="#e05206">NASSCOM Foundation</text>
+  </g>
+  <g transform="translate(600, 230)" text-anchor="middle">
+    <text class="title">CERTIFICATE OF EXCELLENCE</text>
+    <text class="sub" y="50">HTML &amp; CSS Web Development</text>
+    <text class="sub" y="120">Awarded to</text>
+    <text class="name" y="175">Nurul Shaikh</text>
+    <text class="sub" y="215">Credential ID: <tspan font-weight="700" fill="#005073">CISCO-NASSCOM-2025</tspan></text>
+  </g>
+  <g transform="translate(600, 500)" text-anchor="middle">
+    <text class="body">For successfully demonstrating proficiency in Web Standards, HTML5 structure,</text>
+    <text class="body" y="30">responsive CSS design, and web accessibility fundamentals under Cisco CSR thingQbator.</text>
+  </g>
+  <g transform="translate(150, 660)">
+    <text font-family="Inter" font-size="16" font-weight="700" fill="#005073">Jyoti Sharma</text>
+    <text font-family="Inter" font-size="13" fill="#666666" y="20">CEO, NASSCOM Foundation</text>
+  </g>
+  <g transform="translate(850, 660)">
+    <text font-family="Inter" font-size="16" font-weight="700" fill="#005073">R.K. Behera</text>
+    <text font-family="Inter" font-size="13" fill="#666666" y="20">Chief Mentor, thingQbator</text>
+  </g>
+</svg>

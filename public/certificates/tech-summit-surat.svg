@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap');
+      .title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 44px; font-weight: 800; fill: #ffffff; }
+      .name { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 38px; font-weight: 700; fill: #a855f7; }
+      .sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; fill: #94a3b8; }
+      .body { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; fill: #cbd5e1; }
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="#0b0f19"/>
+  <rect x="30" y="30" width="1140" height="740" fill="#111827" rx="12" stroke="#1f2937" stroke-width="2"/>
+  <g transform="translate(600, 140)" text-anchor="middle">
+    <text class="sub" letter-spacing="4">SURAT TECH INNOVATION ECOSYSTEM</text>
+    <text class="title" y="55">Tech Summit 2025</text>
+    <text class="sub" y="95">CERTIFICATE OF PARTICIPATION</text>
+  </g>
+  <g transform="translate(600, 310)" text-anchor="middle">
+    <text class="sub">This certificate is proudly awarded to</text>
+    <text class="name" y="55">Nurul Shaikh</text>
+    <text class="sub" y="95">Certificate ID: <tspan font-weight="700" fill="#ffffff">TSH25008</tspan></text>
+  </g>
+  <g transform="translate(600, 480)" text-anchor="middle">
+    <text class="body">In recognition of active participation and valuable contribution towards fostering</text>
+    <text class="body" y="30">technological innovation and collaborative growth at Sardar Patel Smruti Bhavan, Surat.</text>
+  </g>
+  <g transform="translate(200, 660)">
+    <text font-family="Plus Jakarta Sans" font-size="16" font-weight="700" fill="#ffffff">Organizing Committee</text>
+    <text font-family="Plus Jakarta Sans" font-size="13" fill="#94a3b8" y="20">Tech Summit 2025 Surat</text>
+  </g>
+  <g transform="translate(850, 660)">
+    <text font-family="Plus Jakarta Sans" font-size="16" font-weight="700" fill="#a855f7">October 4th, 2025</text>
+    <text font-family="Plus Jakarta Sans" font-size="13" fill="#94a3b8" y="20">Venue: Sardar Patel Smruti Bhavan</text>
+  </g>
+</svg>

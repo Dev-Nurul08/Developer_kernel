@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;1,400&amp;display=swap');
+      .cert-title { font-family: 'Instrument Serif', 'Playfair Display', Georgia, serif; font-size: 52px; fill: #ffffff; }
+      .cert-sub { font-family: 'Inter', sans-serif; font-size: 20px; fill: #a3b899; font-weight: 400; }
+      .name { font-family: 'Inter', sans-serif; font-size: 42px; font-weight: 700; fill: #ffffff; }
+      .course-bold { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; fill: #ffffff; }
+      .sig-name { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .sig-title { font-family: 'Inter', sans-serif; font-size: 14px; fill: #94a3b8; font-weight: 500; }
+      .sig-hand { font-family: 'Playfair Display', cursive, serif; font-style: italic; font-size: 26px; fill: #e2e8f0; opacity: 0.9; }
+      .brand-text { font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 700; fill: #ffffff; }
+    </style>
+    <pattern id="dotGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="10" fill="#082011" opacity="0.6"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#050a06"/>
+  <rect x="25" y="25" width="1150" height="750" fill="#09180d" rx="4" stroke="#16381d" stroke-width="2"/>
+  <rect x="25" y="25" width="1150" height="750" fill="url(#dotGrid)" rx="4"/>
+  <rect x="40" y="40" width="14" height="720" fill="#ccff00" rx="3"/>
+  <g transform="translate(110, 95)">
+    <circle cx="0" cy="0" r="4" fill="#ccff00"/>
+    <circle cx="12" cy="0" r="4" fill="#ccff00"/>
+    <circle cx="24" cy="0" r="4" fill="#ccff00"/>
+    <circle cx="0" cy="12" r="4" fill="#ccff00"/>
+    <circle cx="12" cy="12" r="4" fill="#ccff00"/>
+    <circle cx="24" cy="12" r="4" fill="#ccff00"/>
+    <circle cx="0" cy="24" r="4" fill="#ccff00"/>
+    <circle cx="12" cy="24" r="4" fill="#ccff00"/>
+    <circle cx="24" cy="24" r="4" fill="#ccff00"/>
+    <text x="45" y="20" class="brand-text">Outskill</text>
+  </g>
+  <text x="110" y="230" class="cert-title">Certificate of Completion</text>
+  <text x="110" y="300" class="cert-sub">Proudly presented to</text>
+  <text x="110" y="365" class="name">Nurul Shaikh</text>
+  <line x1="110" y1="395" x2="620" y2="395" stroke="#254a2b" stroke-width="2"/>
+  <text x="110" y="445" class="cert-sub">for successfully completing <tspan class="course-bold">Gen AI Engineering Mastermind</tspan></text>
+  <g transform="translate(110, 600)">
+    <text x="0" y="0" class="sig-hand">Ramanathan</text>
+    <text x="0" y="32" class="sig-name">Ramanathan</text>
+    <text x="0" y="54" class="sig-title">Data Scientist at SLK</text>
+  </g>
+  <g transform="translate(350, 600)">
+    <text x="0" y="0" class="sig-hand">Vishnuvardhan bkm</text>
+    <text x="0" y="32" class="sig-name">Vishnuvardhan BKM</text>
+    <text x="0" y="54" class="sig-title">AI Researcher at Silival</text>
+  </g>
+  <g transform="translate(600, 600)">
+    <text x="0" y="0" class="sig-hand">Vaibhav Sisinty</text>
+    <text x="0" y="32" class="sig-name">Vaibhav Sisinty</text>
+    <text x="0" y="54" class="sig-title">Founder, Outskill</text>
+  </g>
+  <g transform="translate(860, 500)">
+    <circle cx="0" cy="0" r="26" fill="#ffffff"/>
+    <circle cx="75" cy="0" r="26" fill="#ffffff"/>
+    <path d="M 150 -26 Q 150 0 176 0 Q 150 0 150 26 Q 150 0 124 0 Q 150 0 150 -26 Z" fill="#ffffff"/>
+    <circle cx="0" cy="75" r="26" fill="#ccff00"/>
+    <circle cx="75" cy="75" r="26" fill="#ccff00"/>
+    <circle cx="150" cy="75" r="26" fill="#ccff00"/>
+    <circle cx="0" cy="150" r="26" fill="#ccff00"/>
+    <circle cx="75" cy="150" r="26" fill="#ccff00"/>
+    <circle cx="150" cy="150" r="26" fill="#ffffff"/>
+  </g>
+</svg>

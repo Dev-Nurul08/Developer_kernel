@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Alex+Brush&amp;display=swap');
+      .title { font-family: 'Cinzel', serif; font-size: 46px; fill: #0f172a; font-weight: 700; letter-spacing: 2px; }
+      .sub { font-family: 'Inter', sans-serif; font-size: 18px; fill: #475569; font-weight: 500; }
+      .name { font-family: 'Cinzel', serif; font-size: 38px; font-weight: 700; fill: #0d9488; }
+      .text-body { font-family: 'Inter', sans-serif; font-size: 16px; fill: #334155; line-height: 1.6; }
+      .bold { font-weight: 700; fill: #0f172a; }
+      .sig-hand { font-family: 'Alex Brush', cursive; font-size: 36px; fill: #0f172a; }
+      .sig-name { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; fill: #0f172a; }
+      .sig-title { font-family: 'Inter', sans-serif; font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  <rect x="30" y="30" width="1140" height="740" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+  <rect x="45" y="45" width="1110" height="710" fill="none" stroke="#0d9488" stroke-width="3" rx="4"/>
+  <g transform="translate(600, 120)" text-anchor="middle">
+    <text class="sub" y="-20" letter-spacing="4">YUGA YATRA RETAIL (OPC) PRIVATE LIMITED</text>
+    <text class="title" y="30">CERTIFICATE OF INTERNSHIP</text>
+    <line x1="-150" y1="50" x2="150" y2="50" stroke="#0d9488" stroke-width="2"/>
+  </g>
+  <g transform="translate(600, 240)" text-anchor="middle">
+    <text class="sub">This is to certify that</text>
+    <text class="name" y="50">NURUL SHAIKH</text>
+    <text class="sub" y="90">Intern ID: <tspan font-weight="700" fill="#0f172a">280400868</tspan></text>
+  </g>
+  <g transform="translate(600, 390)" text-anchor="middle">
+    <text class="text-body" y="0">has successfully completed a 2-Month Engineering Internship as a <tspan class="bold">Software Developer Intern</tspan></text>
+    <text class="text-body" y="30">at Yuga Yatra Retail (OPC) Private Limited from <tspan class="bold">June 01, 2026 to August 01, 2026</tspan>.</text>
+    <text class="text-body" y="70">During this internship, he demonstrated exceptional dedication, technical skill, and full-stack excellence</text>
+    <text class="text-body" y="100">in delivering production web services, REST API architectures, and interactive UI systems.</text>
+  </g>
+  <g transform="translate(200, 640)">
+    <text class="sig-hand">Debashish Kumar</text>
+    <line x1="0" y1="15" x2="220" y2="15" stroke="#94a3b8" stroke-width="1"/>
+    <text class="sig-name" y="38">Debashish Kumar</text>
+    <text class="sig-title" y="58">Founder &amp; CEO, Yuga Yatra</text>
+  </g>
+  <g transform="translate(800, 640)">
+    <circle cx="80" cy="0" r="45" fill="#f0fdf4" stroke="#0d9488" stroke-width="2"/>
+    <text x="80" y="-5" text-anchor="middle" font-family="Inter" font-size="10" font-weight="700" fill="#0d9488">VERIFIED</text>
+    <text x="80" y="12" text-anchor="middle" font-family="Inter" font-size="12" font-weight="700" fill="#0f172a">OFFICIAL</text>
+    <text x="80" y="25" text-anchor="middle" font-family="Inter" font-size="9" fill="#64748b">SEAL</text>
+  </g>
+</svg>

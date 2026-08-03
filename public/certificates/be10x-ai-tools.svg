@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap');
+      .title { font-family: 'Outfit', sans-serif; font-size: 48px; font-weight: 800; fill: #ffffff; }
+      .name { font-family: 'Outfit', sans-serif; font-size: 40px; font-weight: 700; fill: #38bdf8; }
+      .sub { font-family: 'Inter', sans-serif; font-size: 18px; fill: #94a3b8; }
+      .text-body { font-family: 'Inter', sans-serif; font-size: 16px; fill: #cbd5e1; }
+      .bold { font-weight: 700; fill: #ffffff; }
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="#0f172a"/>
+  <rect x="30" y="30" width="1140" height="740" fill="#1e293b" rx="12" stroke="#334155" stroke-width="2"/>
+  <rect x="30" y="30" width="1140" height="8" fill="#38bdf8" rx="4"/>
+  <g transform="translate(100, 100)">
+    <text font-family="Outfit" font-size="32" font-weight="800" fill="#38bdf8">be<tspan fill="#ffffff">10x</tspan></text>
+    <text x="1000" y="0" text-anchor="end" font-family="Inter" font-size="14" font-weight="600" fill="#38bdf8">VERIFIED CREDENTIAL</text>
+  </g>
+  <g transform="translate(600, 220)" text-anchor="middle">
+    <text class="sub" letter-spacing="3">WORKSHOP CERTIFICATE OF COMPLETION</text>
+    <text class="title" y="60">AI Tools &amp; ChatGPT Masterclass</text>
+    <text class="sub" y="130">This is proudly presented to</text>
+    <text class="name" y="185">NURUL SHAIKH</text>
+    <text class="sub" y="225">Credential ID: <tspan font-weight="600" fill="#ffffff">BE10X-AI-2025</tspan></text>
+  </g>
+  <g transform="translate(600, 520)" text-anchor="middle">
+    <text class="text-body">For successfully mastering advanced AI tools, rapid code generation, data analytics with LLMs,</text>
+    <text class="text-body" y="30">and high-speed AI workflow automation in under 10 minutes.</text>
+  </g>
+  <g transform="translate(200, 670)">
+    <text font-family="Inter" font-size="18" font-weight="700" fill="#ffffff">Aditya Goenka &amp; Aditya Kachave</text>
+    <text font-family="Inter" font-size="14" fill="#94a3b8" y="24">Co-founders, be10x</text>
+  </g>
+  <g transform="translate(900, 670)" text-anchor="end">
+    <text font-family="Inter" font-size="14" font-weight="600" fill="#38bdf8">Issued: November 2nd, 2025</text>
+  </g>
+</svg>
