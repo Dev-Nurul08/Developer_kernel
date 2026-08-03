@@ -880,10 +880,13 @@ export const certificates = [
   },
   {
     category: "GenAI Engineering",
-    title: "Gen AI Engineering Mastermind",
+    title: "Gen AI Engineering Mastermind — Certificate of Completion",
     issuer: "Outskill",
-    date: "2025",
-    summary: "Generative AI engineering fundamentals, LLM prompt design, agent workflows, and AI-powered application development.",
+    date: "Verified Completion",
+    internId: "OUTSKILL-GENAI-MASTERMIND",
+    ceo: "Vaibhav Sisinty (Founder, Outskill) • Ramanathan (Data Scientist at SLK) • Vishnuvardhan BKM (AI Researcher at Silival)",
+    summary:
+      "Official Certificate of Completion proudly presented to Nurul Shaikh for successfully completing Gen AI Engineering Mastermind by Outskill. Certified and signed by Vaibhav Sisinty (Founder, Outskill), Ramanathan (Data Scientist at SLK), and Vishnuvardhan BKM (AI Researcher at Silival). Demonstrates expertise in Generative AI engineering fundamentals, prompt design, multi-agent workflows, and LLM-driven software architecture.",
   },
   {
     category: "Leadership & Soft Skills",

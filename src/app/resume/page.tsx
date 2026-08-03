@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { MotionSection, PageTransition } from "@/components/motion-section";
-import { resumeDetails, projects } from "@/lib/data";
+import { resumeDetails, projects, certificates } from "@/lib/data";
 import {
   Download,
   Briefcase,
@@ -17,6 +17,7 @@ import {
   ExternalLink,
   Code2,
   Layers,
+  Award,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -248,6 +249,52 @@ export default function ResumePage() {
           <span className="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-semibold text-emerald-400">
             {education.period}
           </span>
+        </div>
+      </MotionSection>
+
+      {/* Certifications & Verified Credentials */}
+      <MotionSection className="glass-panel rounded-xl p-6 sm:p-8 space-y-4">
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-bold uppercase tracking-wider text-emerald-500 flex items-center gap-2">
+            <Award className="size-4" /> Certifications & Verified Credentials
+          </h2>
+          <Link
+            href="/certificates"
+            className="text-xs font-semibold text-emerald-400 hover:underline flex items-center gap-1"
+          >
+            View Certificate Explorer <ExternalLink className="size-3" />
+          </Link>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          {certificates.map((cert) => (
+            <div
+              key={cert.title}
+              className="lift-card glass-tile rounded-xl p-4 border border-[var(--app-border)] hover:border-emerald-500/40 space-y-2 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400">
+                    {cert.category}
+                  </span>
+                  <span className="rounded border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 font-mono text-[10px] text-amber-300">
+                    {cert.date}
+                  </span>
+                </div>
+                <h3 className="text-sm font-bold text-[var(--app-text)] mt-1">{cert.title}</h3>
+                <p className="text-xs font-semibold text-emerald-400">{cert.issuer}</p>
+                <p className="text-xs leading-5 text-[var(--app-muted)] mt-2 line-clamp-3">
+                  {cert.summary}
+                </p>
+              </div>
+
+              {cert.ceo && (
+                <p className="text-[11px] font-mono text-zinc-400 border-t border-[var(--app-border)] pt-2 mt-2 truncate">
+                  Signatories: {cert.ceo}
+                </p>
+              )}
+            </div>
+          ))}
         </div>
       </MotionSection>
 
