@@ -81,15 +81,15 @@ export function CertificateExplorer() {
                 {selected.summary}
               </p>
 
-              {selected.category === "Internship" && (
+              {selected.ceo && (
                 <div className="mt-6 rounded-lg border border-amber-500/30 bg-amber-500/5 p-4 text-xs space-y-2">
-                  <div className="flex items-center justify-between text-zinc-300 font-semibold border-b border-amber-500/20 pb-2">
-                    <span>Recipients: <strong className="text-white">Mr. Nurul Shaikh</strong></span>
-                    <span>Role: <strong className="text-emerald-400">Software Developer Intern</strong></span>
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-zinc-300 font-semibold border-b border-amber-500/20 pb-2">
+                    <span>Awarded To: <strong className="text-white">Nurul Shaikh</strong></span>
+                    <span>Issuer / Track: <strong className="text-emerald-400">{selected.issuer}</strong></span>
                   </div>
-                  <div className="flex items-center justify-between text-zinc-400 pt-1">
-                    <span>Period: 01st June, 2026 to 01st August, 2026</span>
-                    <span className="font-mono text-amber-400">Signed by: Debashish Kumar (Founder & CEO)</span>
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-zinc-400 pt-1 font-mono">
+                    <span>Date: {selected.date}</span>
+                    <span className="text-amber-400">Authority: {selected.ceo}</span>
                   </div>
                 </div>
               )}
