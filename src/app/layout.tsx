@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   creator: "Nurul Shaikh",
   publisher: "Nurul Shaikh",
   verification: {
-    google: "WGBTeJL_0aLpNmsXo1gMmRU5HvKBrO-IPU6xh7BtK30",
+    google: ["google4ecab634e4906461", "WGBTeJL_0aLpNmsXo1gMmRU5HvKBrO-IPU6xh7BtK30"],
   },
   openGraph: {
     title: "Nurul Shaikh | Full-Stack Developer & Software Architect",
@@ -136,6 +136,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
       <head>
+        <meta name="google-site-verification" content="google4ecab634e4906461" />
         <meta name="google-site-verification" content="WGBTeJL_0aLpNmsXo1gMmRU5HvKBrO-IPU6xh7BtK30" />
         <script
           type="application/ld+json"
