@@ -324,7 +324,7 @@ export default function ResumePage() {
           <Terminal className="size-4" /> AI-Augmented Development Workflow
         </h2>
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {aiWorkflow.map((wf) => (
             <div
               key={wf.tool}

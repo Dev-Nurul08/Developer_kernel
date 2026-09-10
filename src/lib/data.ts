@@ -116,8 +116,8 @@ export const skills: SkillGroup[] = [
   {
     title: "Developer Tools & AI IDEs",
     level: "Advanced",
-    items: ["Git", "GitHub", "Claude Code", "Cursor", "Aider", "Vercel", "Postman", "VS Code"],
-    signal: "Leverages cutting-edge AI pair programming and CLI tools for accelerated software delivery.",
+    items: ["Git", "GitHub", "Trae", "Codex", "Claude Code", "Cursor", "Aider", "Vercel", "Postman", "VS Code"],
+    signal: "Leverages cutting-edge AI pair programming, autonomous IDEs, and CLI tools for accelerated software delivery.",
   },
   {
     title: "Soft Skills (IPDC)",
@@ -1153,7 +1153,7 @@ export const resumeDetails = {
     location: "Navsari, Gujarat, India",
   },
   summary:
-    "Results-driven Full-Stack & AI Developer with 1+ year of professional experience building scalable REST APIs, integrating databases, deploying LLM agents, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects. Builds full-stack applications spanning AI-agentic pipelines, 3D WebGL interfaces, and rural governance portals. Actively uses AI-powered IDEs — Claude Code, Cursor, and Aider — to accelerate development velocity, reduce boilerplate, and ship higher-quality code in less time. Open to remote freelance contracts and long-term engagements.",
+    "Results-driven Full-Stack & AI Developer with 1+ year of professional experience building scalable REST APIs, integrating databases, deploying LLM agents, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects. Builds full-stack applications spanning AI-agentic pipelines, 3D WebGL interfaces, and rural governance portals. Actively uses AI-powered IDEs — Claude Code, Cursor, Trae, Codex, and Aider — to accelerate development velocity, reduce boilerplate, and ship higher-quality code in less time. Open to remote freelance contracts and long-term engagements.",
   technicalSkills: [
     {
       category: "Server-Side & APIs",
@@ -1185,7 +1185,7 @@ export const resumeDetails = {
     },
     {
       category: "AI-Powered IDEs",
-      skills: ["Claude Code", "Cursor", "Aider"],
+      skills: ["Claude Code", "Cursor", "Trae", "Codex", "Aider"],
     },
     {
       category: "Other",
@@ -1202,7 +1202,7 @@ export const resumeDetails = {
         "Built and deployed web systems for independent clients — REST APIs, admin dashboards, auth modules, and database-driven applications using Node.js, Express.js, and MongoDB/MySQL.",
         "Integrated third-party services including payment gateways, SMS/email APIs, and cloud storage into production applications.",
         "Engineered full-stack products spanning 3D WebGL e-commerce, AI-agentic B2B lead pipelines, and civic government portals — each shipped solo from architecture through deployment.",
-        "Leveraged Claude Code, Cursor, and Aider as AI coding assistants to reduce average feature development time by ~35%, while maintaining full code ownership and review.",
+        "Leveraged Claude Code, Cursor, Trae, Codex, and Aider as AI coding assistants to reduce average feature development time by ~35%, while maintaining full code ownership and review.",
         "Managed client scoping, async communication, sprint planning, and on-time delivery across concurrent projects.",
       ],
     },
@@ -1217,7 +1217,7 @@ export const resumeDetails = {
         "Developed pixel-perfect, mobile-responsive frontend interfaces using HTML, CSS, JavaScript, and React — coordinating closely with the Project Manager to meet design specs and delivery timelines.",
         "Worked directly under the Project Manager to understand requirements, break down tasks, and deliver features on schedule across multiple concurrent projects.",
         "Handled both frontend UI development and API integration work — ensuring smooth data flow between server responses and the user interface.",
-        "Used AI tools (Claude Code, Cursor) to speed up component scaffolding and UI development, reducing repetitive coding tasks by ~30%.",
+        "Used AI tools (Claude Code, Cursor, Trae) to speed up component scaffolding and UI development, reducing repetitive coding tasks by ~30%.",
       ],
     },
   ],
@@ -1236,6 +1236,14 @@ export const resumeDetails = {
     {
       tool: "Cursor",
       description: "AI-native IDE with codebase-aware autocomplete and inline chat for rapid feature development and real-time debugging sessions.",
+    },
+    {
+      tool: "Trae",
+      description: "Adaptive AI-native IDE featuring built-in multi-model intelligence (Claude 3.5 Sonnet & GPT-4o), builder mode, and autonomous workspace refactoring.",
+    },
+    {
+      tool: "Codex",
+      description: "AI code generation & agentic command execution engine for automated script synthesis, boilerplate elimination, and algorithmic implementation.",
     },
     {
       tool: "Aider",

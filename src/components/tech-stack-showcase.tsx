@@ -86,8 +86,8 @@ const aiPillars = [
     color: "#8B5CF6",
     badge: "AI IDEs & Pair Coding",
     description:
-      "Deep daily expertise using Claude Code, Cursor, and Aider to accelerate feature delivery, eliminate boilerplate, and execute automated refactoring.",
-    tags: ["Claude Code", "Cursor AI", "Aider CLI", "Code Velocity"],
+      "Deep daily expertise using Claude Code, Cursor, Trae, Codex, and Aider to accelerate feature delivery, eliminate boilerplate, and execute automated refactoring.",
+    tags: ["Claude Code", "Cursor AI", "Trae IDE", "Codex", "Aider CLI", "Code Velocity"],
   },
 ];
 
