@@ -3,7 +3,7 @@
 import { Environment, Float, Stars, useTexture } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useRouter } from "next/navigation";
-import { Suspense, useMemo, useRef, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 
 /* ═══════════════════════════════════════════════════════
@@ -999,19 +999,39 @@ function WorkstationModel() {
 }
 
 export function DeveloperCore() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.05, rootMargin: "100px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="glass-panel relative h-[420px] overflow-hidden rounded-lg group/canvas">
+    <div ref={containerRef} className="glass-panel relative h-[420px] overflow-hidden rounded-lg group/canvas will-change-transform">
       <Canvas
+        frameloop={isVisible ? "always" : "never"}
         shadows
         camera={{ position: [0.05, -0.02, 2.32], fov: 44 }}
         gl={{
           antialias: true,
           alpha: true,
+          powerPreference: "high-performance",
           toneMapping: THREE.ACESFilmicToneMapping,
           toneMappingExposure: 1.15,
         }}
         className="h-full w-full bg-transparent"
-        dpr={[1, 2]}
+        dpr={[1, 1.5]}
       >
         {/* ─── Ambient & Global ─── */}
         <ambientLight intensity={0.25} color="#9090C0" />
@@ -1022,7 +1042,7 @@ export function DeveloperCore() {
           intensity={2.8}
           color="#FFF5E4"
           castShadow
-          shadow-mapSize={[2048, 2048]}
+          shadow-mapSize={[1024, 1024]}
           shadow-camera-near={0.5}
           shadow-camera-far={15}
           shadow-camera-left={-4}
@@ -1049,15 +1069,15 @@ export function DeveloperCore() {
         {/* ─── Environment for reflections ─── */}
         <Environment preset="city" />
 
-        {/* ─── Starfield (denser) ─── */}
+        {/* ─── Starfield (optimized density) ─── */}
         <Stars
           radius={14}
           depth={32}
-          count={1400}
+          count={450}
           factor={1.7}
           saturation={0.6}
           fade
-          speed={0.9}
+          speed={0.6}
         />
 
         {/* ─── Main Workstation Scene ─── */}

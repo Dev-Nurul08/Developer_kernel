@@ -110,15 +110,18 @@ export default function Home() {
             
             <div className="text-center md:text-left flex-1 min-w-0">
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
-                <h1 className="text-2xl font-bold tracking-tight text-[var(--app-text)] hover:text-emerald-500 transition-colors duration-200 truncate">
+                <h1 className="text-2xl font-bold tracking-tight text-[var(--app-text)] hover:text-emerald-500 transition-colors duration-200">
                   {systemProfile.name}
+                  <span className="sr-only"> — Top Full-Stack Web Developer in Navsari, Gujarat, India</span>
                 </h1>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-0.5 text-xs text-emerald-500">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                   {systemProfile.developer}
                 </span>
               </div>
-              <p className="text-emerald-500 font-medium text-sm mt-0.5">{systemProfile.role}</p>
+              <p className="text-emerald-500 font-medium text-sm mt-0.5">
+                {systemProfile.role} <span className="text-[var(--app-muted)] font-normal">• Navsari, Gujarat, India</span>
+              </p>
               
               {/* Social Brand Links Grid */}
               <div className="mt-4 flex flex-wrap items-center justify-center md:justify-start gap-2">
@@ -175,7 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      <MotionSection className="space-y-4">
+      <MotionSection className="content-auto space-y-4">
         <div>
           <p className="text-sm text-[var(--app-muted)]">Tech Stack Runtime</p>
           <h2 className="text-2xl font-semibold text-[var(--app-text)]">Tech Stack</h2>
@@ -183,7 +186,7 @@ export default function Home() {
         <TechStackShowcase />
       </MotionSection>
 
-      <MotionSection className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <MotionSection className="content-auto grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {dashboardWidgets.map((widget, index) => {
           const icons = [GitBranch, Activity, BookOpenCheck, CheckCircle2];
           const Icon = icons[index];

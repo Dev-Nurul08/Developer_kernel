@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { projects } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://github.com/Dev-Nurul08";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nurulos.vercel.app";
 
   const routes = [
     "",

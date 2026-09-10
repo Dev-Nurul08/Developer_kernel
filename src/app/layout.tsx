@@ -13,55 +13,70 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://nurulos.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://github.com/Dev-Nurul08"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Nurul Shaikh | Full-Stack Developer & Software Architect",
-    template: "%s | Nurul Shaikh"
+    default: "Nurul Shaikh | Top Full-Stack Web Developer in Navsari, Gujarat & India",
+    template: "%s | Nurul Shaikh — Web Developer"
   },
   description:
-    "Official portfolio of Nurul Shaikh — Full-Stack Developer & Software Architect specializing in Node.js, React, Next.js, TypeScript, Python, FastAPI, MongoDB, and modern high-performance web systems.",
+    "Official portfolio of Nurul Shaikh, top-rated Full-Stack Web Developer & Software Architect based in Navsari, Gujarat, India. Specializing in Python, FastAPI, Next.js, React 19, Node.js, REST APIs, and AI Agentic automation worldwide. Hire Nurul Shaikh for high-performance software systems.",
   keywords: [
     "Nurul Shaikh",
-    "Nurul Shaikh Full-Stack Developer",
     "Nurul Shaikh Web Developer",
+    "Nurul Shaikh Full-Stack Developer",
     "Nurul Shaikh Developer",
+    "Nurul Shaikh Navsari",
+    "Nurul Shaikh Gujarat",
+    "Nurul Shaikh India",
     "Nurul Shaikh Portfolio",
     "Nurul Shaikh Software Engineer",
     "Nurul Shaikh Backend Developer",
     "Nurul Shaikh React Developer",
     "Nurul Shaikh Node.js Developer",
+    "Nurul Shaikh Python Developer",
+    "Nurul Shaikh FastAPI",
     "Nurul Shaikh GitHub",
-    "Nurul Shaikh India",
-    "Nurul Shaikh Navsari",
-    "Nurul Shaikh Projects",
-    "Full-Stack Developer",
-    "Full Stack Developer Portfolio",
-    "Backend Engineer",
-    "Software Architect",
-    "Next.js Developer",
-    "FastAPI Python Developer",
-    "Three.js 3D WebGL",
-    "Web Application Architecture",
-    "Interactive Arcade Games"
+    "Web Developer in Navsari",
+    "Best Web Developer in Navsari",
+    "Full Stack Developer in Navsari",
+    "Web Developer in Gujarat",
+    "Full Stack Developer in Gujarat",
+    "Web Developer India",
+    "Full Stack Developer India",
+    "Freelance Web Developer Navsari",
+    "Freelance Web Developer Gujarat",
+    "Software Engineer Navsari",
+    "Software Engineer Gujarat",
+    "Python FastAPI Developer Gujarat",
+    "Next.js React Developer India",
+    "AI Agent Developer India",
+    "Dev-Nurul08",
+    "shaikhnurul8200@gmail.com"
   ],
-  authors: [{ name: "Nurul Shaikh", url: "https://github.com/Dev-Nurul08" }],
+  authors: [{ name: "Nurul Shaikh", url: SITE_URL }],
   creator: "Nurul Shaikh",
   publisher: "Nurul Shaikh",
+  alternates: {
+    canonical: SITE_URL,
+  },
   verification: {
     google: ["google4ecab634e4906461", "WGBTeJL_0aLpNmsXo1gMmRU5HvKBrO-IPU6xh7BtK30"],
   },
   openGraph: {
-    title: "Nurul Shaikh | Full-Stack Developer & Software Architect",
-    description: "Explore the verified production projects, case studies, backend architecture, credentials, and interactive arcade games of Nurul Shaikh.",
-    url: "https://github.com/Dev-Nurul08",
-    siteName: "Nurul Shaikh - Full-Stack Developer",
+    title: "Nurul Shaikh | Top Full-Stack Web Developer in Navsari, Gujarat & India",
+    description:
+      "Explore production projects, system architecture, certified backend credentials, and AI solutions by Nurul Shaikh — Full-Stack Web Developer based in Navsari, Gujarat, India.",
+    url: SITE_URL,
+    siteName: "Nurul Shaikh — Full-Stack Web Developer",
     images: [
       {
         url: "/profile.png",
         width: 800,
         height: 800,
-        alt: "Nurul Shaikh - Full-Stack Developer & Software Architect",
+        alt: "Nurul Shaikh - Full-Stack Developer in Navsari, Gujarat, India",
       },
     ],
     type: "website",
@@ -69,8 +84,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nurul Shaikh | Full-Stack Developer & Software Architect",
-    description: "Explore the verified production projects, case studies, backend architecture, credentials, and interactive arcade games of Nurul Shaikh.",
+    title: "Nurul Shaikh | Full-Stack Web Developer in Navsari, Gujarat & India",
+    description:
+      "Explore production projects, system architecture, certified backend credentials, and AI solutions by Nurul Shaikh — Full-Stack Web Developer based in Navsari, Gujarat, India.",
     images: ["/profile.png"],
     creator: "@Dev_Nurul08"
   },
@@ -92,13 +108,30 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://github.com/Dev-Nurul08#person",
+      "@id": `${SITE_URL}/#person`,
       "name": "Nurul Shaikh",
-      "alternateName": ["Nurul", "Dev-Nurul08", "Nurul Mozahidulislam Shaikh"],
-      "jobTitle": "Full-Stack Developer & Software Architect",
-      "description": "Nurul Shaikh is a Full-Stack Developer & Software Architect specializing in Node.js, React, Next.js, Python, FastAPI, TypeScript, MongoDB, and enterprise web architecture.",
-      "url": "https://github.com/Dev-Nurul08",
-      "image": "https://github.com/Dev-Nurul08/Developer_kernel/raw/main/public/profile.png",
+      "alternateName": ["Nurul", "Dev-Nurul08", "Nurul Mozahidulislam Shaikh", "Shaikh Nurul"],
+      "givenName": "Nurul",
+      "familyName": "Shaikh",
+      "jobTitle": "Full-Stack Web Developer & Software Architect",
+      "description":
+        "Nurul Shaikh is a top Full-Stack Web Developer and Software Architect based in Navsari, Gujarat, India. Specializing in Python, FastAPI, Node.js, Express, React, Next.js, MongoDB, PostgreSQL, and autonomous AI Agent systems.",
+      "url": SITE_URL,
+      "image": `${SITE_URL}/profile.png`,
+      "email": "mailto:shaikhnurul8200@gmail.com",
+      "telephone": "+91-9274490242",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Navsari",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN",
+        "postalCode": "396445"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 20.9467,
+        "longitude": 72.9520
+      },
       "sameAs": [
         "https://github.com/Dev-Nurul08",
         "https://www.linkedin.com/in/nurul-shaikh/",
@@ -106,50 +139,94 @@ const jsonLd = {
         "https://leetcode.com/u/Fr_Nurul/"
       ],
       "knowsAbout": [
-        "Full-Stack Development",
+        "Full-Stack Web Development",
+        "Web Development Navsari",
+        "Web Development Gujarat",
         "Software Architecture",
         "Backend Engineering",
-        "Node.js",
-        "Express.js",
-        "React",
-        "Next.js",
+        "Python & FastAPI",
+        "Node.js & Express.js",
+        "React 19 & Next.js",
         "TypeScript",
-        "Python",
-        "FastAPI",
-        "MongoDB",
-        "MySQL",
-        "REST APIs",
-        "Three.js & WebGL",
-        "Playwright Web Scraping",
-        "Generative AI Integration"
+        "MongoDB & PostgreSQL",
+        "RESTful API Design",
+        "Autonomous AI Agents",
+        "Three.js & WebGL"
+      ],
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "National Skill Development Corporation (NSDC) & Skill India"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Red & White Multimedia Education"
+        }
       ],
       "hasOccupation": {
         "@type": "Occupation",
-        "name": "Full-Stack Software Engineer",
+        "name": "Full-Stack Web Developer",
         "occupationLocation": {
-          "@type": "Country",
-          "name": "India"
+          "@type": "City",
+          "name": "Navsari, Gujarat, India"
         }
       }
     },
     {
+      "@type": "ProfessionalService",
+      "@id": `${SITE_URL}/#service`,
+      "name": "Nurul Shaikh - Web Development & Software Engineering Services",
+      "url": SITE_URL,
+      "image": `${SITE_URL}/profile.png`,
+      "telephone": "+91-9274490242",
+      "email": "shaikhnurul8200@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Navsari",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN",
+        "postalCode": "396445"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 20.9467,
+        "longitude": 72.9520
+      },
+      "areaServed": [
+        "Navsari",
+        "Surat",
+        "Gujarat",
+        "India",
+        "Worldwide"
+      ],
+      "serviceType": [
+        "Full-Stack Web Application Development",
+        "Custom RESTful API Architecture",
+        "AI Agent & LLM Automation",
+        "Interactive 3D WebGL Web Experiences",
+        "E-Commerce & SaaS Development"
+      ]
+    },
+    {
       "@type": "WebSite",
-      "@id": "https://github.com/Dev-Nurul08#website",
+      "@id": `${SITE_URL}/#website`,
       "name": "Nurul Shaikh Portfolio",
-      "url": "https://github.com/Dev-Nurul08",
+      "url": SITE_URL,
       "author": {
         "@type": "Person",
         "name": "Nurul Shaikh"
       },
-      "description": "Official portfolio, production projects, system architecture, and interactive developer tools by Nurul Shaikh."
+      "description":
+        "Official portfolio, production projects, backend architectures, credentials, and contact portal of Nurul Shaikh — Web Developer in Navsari, Gujarat, India."
     },
     {
       "@type": "ProfilePage",
-      "@id": "https://github.com/Dev-Nurul08#profilepage",
-      "url": "https://github.com/Dev-Nurul08",
+      "@id": `${SITE_URL}/#profilepage`,
+      "url": SITE_URL,
       "name": "Nurul Shaikh — Full-Stack Developer Profile",
       "mainEntity": {
-        "@id": "https://github.com/Dev-Nurul08#person"
+        "@id": `${SITE_URL}/#person`
       }
     }
   ]
@@ -170,6 +247,7 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="google4ecab634e4906461" />
         <meta name="google-site-verification" content="WGBTeJL_0aLpNmsXo1gMmRU5HvKBrO-IPU6xh7BtK30" />
+        <link rel="canonical" href={SITE_URL} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
