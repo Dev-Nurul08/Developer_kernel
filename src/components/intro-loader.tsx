@@ -290,7 +290,7 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
           </div>
         </div>
 
-        <p className="loader-subtitle">Personal Operating System v1.0</p>
+        <p className="loader-subtitle">Nurul Shaikh • Full-Stack Developer</p>
         
         <div className="progress-bar-container">
           <div className="progress-bar-fill"></div>

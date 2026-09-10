@@ -53,10 +53,10 @@ export type Project = {
 export const systemProfile = {
   developer: "Online",
   name: "Nurul Shaikh",
-  role: "Full-Stack Developer & Software Architect",
-  currentFocus: ["Node.js", "React / Next.js", "Full-Stack Architecture"],
+  role: "Full-Stack & AI Systems Developer · Software Architect",
+  currentFocus: ["Python & FastAPI", "LLMs & Agentic AI", "Node.js & Next.js", "Scalable REST APIs"],
   availability: "Open for Projects & Hiring",
-  email: "shakhnurul8200@gmail.com",
+  email: "shaikhnurul8200@gmail.com",
   socials: {
     github: "https://github.com/Dev-Nurul08",
     linkedin: "https://www.linkedin.com/in/nurul-shaikh/",
@@ -77,9 +77,9 @@ export const dashboardWidgets = [
     detail: "Commits, PRs, and reviews",
   },
   {
-    label: "Currently Learning",
-    value: "Next.js, React",
-    detail: "Three.js, Node.js",
+    label: "Current Focus",
+    value: "Python, LLMs & AI",
+    detail: "FastAPI, REST APIs, Claude",
   },
   {
     label: "Last Updated",
@@ -90,28 +90,34 @@ export const dashboardWidgets = [
 
 export const skills: SkillGroup[] = [
   {
-    title: "Frontend",
+    title: "AI & LLM Development",
     level: "Advanced",
-    items: ["HTML", "CSS", "Tailwind", "JavaScript", "React"],
-    signal: "Builds fast interfaces with structured, reusable components.",
+    items: ["Python", "LLMs", "Claude API", "OpenAI API", "Autonomous Agents", "Prompt Engineering", "REST APIs", "FastAPI"],
+    signal: "Engineers autonomous multi-agent pipelines, intelligent scrapers, prompt workflows, and streaming AI architectures.",
   },
   {
-    title: "Backend",
+    title: "Backend & Systems",
     level: "Advanced",
-    items: ["Node.js", "Express", "REST APIs", "Auth", "Validation"],
-    signal: "Designs APIs with clear boundaries and dependable data flow.",
+    items: ["Python", "FastAPI", "Node.js", "Express", "REST APIs", "JWT Auth", "SSE Streaming", "Validation"],
+    signal: "Architects scalable RESTful APIs with clean MVC patterns, robust validation, and asynchronous concurrency.",
+  },
+  {
+    title: "Frontend",
+    level: "Advanced",
+    items: ["HTML", "CSS", "Tailwind", "JavaScript", "React", "Next.js"],
+    signal: "Builds fast interfaces with structured, reusable components.",
   },
   {
     title: "Database",
     level: "Intermediate",
-    items: ["MongoDB", "MySQL", "Schema Design", "Indexes", "Aggregation"],
+    items: ["MongoDB", "MySQL", "PostgreSQL", "SQLite", "Schema Design", "Indexes", "Aggregation"],
     signal: "Models data for search, reporting, and long-term maintainability.",
   },
   {
-    title: "Developer Tools",
-    level: "Intermediate",
-    items: ["Git", "GitHub", "Vercel", "Postman", "VS Code", "Antigravity", "Codex"],
-    signal: "Keeps builds, releases, and debugging workflows organized.",
+    title: "Developer Tools & AI IDEs",
+    level: "Advanced",
+    items: ["Git", "GitHub", "Claude Code", "Cursor", "Aider", "Vercel", "Postman", "VS Code"],
+    signal: "Leverages cutting-edge AI pair programming and CLI tools for accelerated software delivery.",
   },
   {
     title: "Soft Skills (IPDC)",
@@ -238,130 +244,6 @@ export const projects: Project[] = [
     },
     githubUrl: "https://github.com/Dev-Nurul08/Mini_Shop",
     liveUrl: "/projects/minishop-3d",
-  },
-  {
-    slug: "leadforge-ai",
-    name: "LeadForge AI",
-    status: "Production",
-    stack: ["Python", "FastAPI", "Playwright", "Claude AI", "Async SQLite", "SSE Streaming"],
-    users: "1,200+ Leads / Day",
-    performance: "99.2% Uptime",
-    category: "Agentic B2B Lead Acquisition Engine",
-    summary:
-      "Multi-agent autonomous prospecting system that discovers businesses, enriches contact details, audits SEO/PageSpeed, scores leads, and generates hyper-personalized AI copy.",
-    overview:
-      "LeadForge AI automates end-to-end B2B sales development. It orchestrates a 4-phase asynchronous agent pipeline: Scout Agent (scraping), Enrichment Agent (contact mining), Auditor Agent (Lighthouse & social harvesting), and Copywriter Agent (Claude AI pitch generation) streaming live over Server-Sent Events (SSE).",
-    problem:
-      "Manual B2B lead generation requires hours of tedious web browsing, copying contact emails, manually checking website speed, and crafting individual outreach emails—resulting in slow outreach and low conversion rates.",
-    architecture: [
-      "FastAPI Async Backend: Controller layer with non-blocking event loops, custom SSE streaming routes, and REST endpoints.",
-      "4-Phase Multi-Agent Engine: ScoutAgent (Playwright browser automation), EnrichmentAgent (regex/DOM contact mining), AuditorAgent (PageSpeed API & SEO heuristics), and CopywriterAgent (Anthropic Claude 3.5 Sonnet API).",
-      "Orchestrator Pipeline: 20-step execution state machine with automatic fallback error recovery, rate-limiting handlers, and queue dispatchers.",
-      "Async SQLite Database (aiosqlite): Concurrent transaction store for leads, audit scores, generated email drafts, and outbound campaign status.",
-    ],
-    features: [
-      "Multi-Source Business Discovery (Justdial, Google Maps, Yelp via Playwright stealth)",
-      "Deep Contact Mining (Emails, Direct Phone, Social Links, Founder Names)",
-      "Automated PageSpeed & Mobile SEO Auditing Matrix",
-      "Lead Scoring & Tiering Matrix (A/B/C/D based on audit severity & revenue potential)",
-      "Claude AI Hyper-Personalized Pitch Generation (tailored pain points & performance fixes)",
-      "Real-Time Pipeline Execution Streaming via Server-Sent Events (SSE)",
-      "One-Click Automated Outreach via SMTP with custom HTML templates",
-    ],
-    database: [
-      {
-        entity: "Leads",
-        fields: ["id", "businessName", "websiteUrl", "niche", "city", "tierScore", "status"],
-        relation: "Has one AuditResult and many CopyDrafts",
-      },
-      {
-        entity: "AuditResults",
-        fields: ["leadId", "performanceScore", "seoScore", "mobileUsability", "missingMeta"],
-        relation: "Belongs to Lead",
-      },
-      {
-        entity: "CopyDrafts",
-        fields: ["leadId", "subjectLine", "emailBody", "painPoint", "sentAt"],
-        relation: "Belongs to Lead",
-      },
-    ],
-    endpoints: [
-      {
-        method: "POST",
-        path: "/api/leads/discover",
-        description: "Triggers Playwright scout agents to find local businesses in a given city & niche.",
-      },
-      {
-        method: "GET",
-        path: "/api/pipeline/stream/:sessionId",
-        description: "Real-time Server-Sent Events (SSE) endpoint streaming 20-step agent progress live.",
-      },
-      {
-        method: "POST",
-        path: "/api/copy/generate",
-        description: "Invokes Claude 3.5 Sonnet to craft tailored outreach copy based on audit results.",
-      },
-      {
-        method: "POST",
-        path: "/api/outreach/send",
-        description: "Dispatches personalized email via SMTP with delivery tracking.",
-      },
-    ],
-    screenshots: [
-      {
-        title: "Pipeline Command Center Terminal",
-        description: "Real-time SSE streaming dashboard displaying live agent logs, active web scrapers, and lead enrichment steps.",
-        mockupType: "terminal",
-      },
-      {
-        title: "Lead Intelligence & Audit Matrix",
-        description: "Detailed audit breakdown showing PageSpeed scores, SEO deficiencies, contact details, and tier ranking.",
-        mockupType: "dashboard",
-      },
-    ],
-    challenges: [
-      "Preventing anti-bot blocks when scraping business directories without relying on expensive proxy services.",
-      "Streaming long-running multi-agent tasks (30s–2m) to the frontend interface without socket timeouts.",
-    ],
-    lessons: [
-      "Decoupling scraping, auditing, and LLM copy generation into distinct worker agents prevents single-point failure across external APIs.",
-      "Streaming granular progress logs builds user trust and makes multi-minute automated tasks feel instantaneous.",
-    ],
-    quickStart: {
-      prerequisites: ["Python 3.10+", "Pip & Virtualenv", "Playwright Chromium Browser", "Anthropic API Key"],
-      envVars: [
-        "ANTHROPIC_API_KEY=sk-ant-...",
-        "PAGESPEED_API_KEY=AIzaSy...",
-        "SMTP_HOST=smtp.gmail.com",
-        "SMTP_PORT=587",
-        "SMTP_USER=user@domain.com",
-        "SMTP_PASS=app_password",
-      ],
-      steps: [
-        {
-          step: "1. Clone Repository & Create Virtual Environment",
-          command: "git clone https://github.com/Dev-Nurul08/leadforge-ai.git && cd leadforge-ai && python -m venv venv && source venv/bin/activate",
-          description: "Initialize project codebase and activate isolated Python 3 environment.",
-        },
-        {
-          step: "2. Install Python Dependencies & Playwright Browsers",
-          command: "pip install -r requirements.txt && playwright install chromium",
-          description: "Install FastAPI, Pydantic, aiosqlite, Anthropic SDK, and headless Chromium.",
-        },
-        {
-          step: "3. Configure Environment Credentials",
-          command: "cp .env.example .env",
-          description: "Set ANTHROPIC_API_KEY, PageSpeed API key, and optional SMTP settings in .env file.",
-        },
-        {
-          step: "4. Launch FastAPI Engine & Open Dashboard",
-          command: "python main.py",
-          description: "Start Uvicorn server on http://localhost:8000 and view the agent control center.",
-        },
-      ],
-    },
-    githubUrl: "https://github.com/Dev-Nurul08",
-    liveUrl: "/projects/leadforge-ai",
   },
   {
     slug: "solaris-3d",
@@ -593,111 +475,6 @@ export const projects: Project[] = [
     liveUrl: "https://surya-pura-gram-portal.vercel.app/",
   },
   {
-    slug: "sitblitz",
-    name: "SitBlitz",
-    status: "Production",
-    stack: ["Next.js", "MongoDB", "Node.js"],
-    users: "500+",
-    performance: "95/100",
-    category: "Booking Platform",
-    summary:
-      "A reservation workflow for discovering spaces, checking availability, and confirming bookings with admin oversight.",
-    overview:
-      "SitBlitz turns venue discovery and booking into a controlled product flow with authentication, inventory rules, booking states, and an admin review path.",
-    problem:
-      "Manual booking requests create delays, double-booking risk, and poor visibility for both users and administrators.",
-    architecture: [
-      "Next.js interface for customer, admin, and public routes.",
-      "Node.js service layer for booking rules, validation, and notifications.",
-      "MongoDB collections for users, venues, slots, bookings, and audit events.",
-      "REST endpoints separated by public discovery, authenticated user actions, and admin operations.",
-    ],
-    features: [
-      "Availability-aware booking requests",
-      "Admin approval and cancellation states",
-      "Role-based access for users and managers",
-      "Searchable venue catalogue",
-      "Booking history and status tracking",
-    ],
-    database: [
-      {
-        entity: "Users",
-        fields: ["name", "email", "role", "createdAt"],
-        relation: "Creates many bookings",
-      },
-      {
-        entity: "Venues",
-        fields: ["title", "location", "capacity", "amenities"],
-        relation: "Owns many slots",
-      },
-      {
-        entity: "Bookings",
-        fields: ["userId", "venueId", "slotId", "status"],
-        relation: "Joins users, venues, and slots",
-      },
-    ],
-    endpoints: [
-      {
-        method: "GET",
-        path: "/api/venues",
-        description: "Search venues by location, capacity, and availability.",
-      },
-      {
-        method: "POST",
-        path: "/api/bookings",
-        description: "Create a validated booking request.",
-      },
-      {
-        method: "PUT",
-        path: "/api/admin/bookings/:id",
-        description: "Approve, reject, or cancel a booking.",
-      },
-    ],
-    screenshots: [
-      {
-        title: "Command Dashboard",
-        description: "Admin queue with booking volume, conversion, and status filters.",
-        mockupType: "dashboard",
-      },
-      {
-        title: "Venue Detail Matrix",
-        description: "Availability matrix, amenities, and booking call to action.",
-        mockupType: "dashboard",
-      },
-    ],
-    challenges: [
-      "Preventing duplicate bookings while keeping the user flow simple.",
-      "Designing status transitions that are easy for admins to audit.",
-    ],
-    lessons: [
-      "State machines make booking workflows easier to reason about.",
-      "Readable admin tools reduce support load as much as public UI polish.",
-    ],
-    quickStart: {
-      prerequisites: ["Node.js 18+", "MongoDB instance"],
-      envVars: ["MONGODB_URI=mongodb://localhost:27017/sitblitz", "NEXTAUTH_SECRET=supersecret"],
-      steps: [
-        {
-          step: "1. Clone Project Repository",
-          command: "git clone https://github.com/Dev-Nurul08/sitblitz.git && cd sitblitz",
-          description: "Clone codebase.",
-        },
-        {
-          step: "2. Install Node Dependencies",
-          command: "npm install",
-          description: "Install Next.js, Mongoose, and React dependencies.",
-        },
-        {
-          step: "3. Run Development Server",
-          command: "npm run dev",
-          description: "Launch Next.js development server on http://localhost:3000.",
-        },
-      ],
-    },
-    githubUrl: "https://github.com/Dev-Nurul08",
-    liveUrl: "/projects/sitblitz",
-  },
-  {
     slug: "devdesk-api",
     name: "DevDesk API",
     status: "Beta",
@@ -801,6 +578,420 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Dev-Nurul08",
     liveUrl: "/projects/devdesk-api",
   },
+  {
+    slug: "site-blitz-hotel",
+    name: "SiteBlitz Luxury Hotel & Resort",
+    status: "Production",
+    stack: ["Next.js 15", "React 19", "Tailwind CSS", "TypeScript", "Framer Motion", "Vercel"],
+    users: "1,800+ Explorations",
+    performance: "99/100 Lighthouse",
+    category: "Luxury Hospitality & Dynamic Booking Experience",
+    summary:
+      "Immersive high-end hotel and resort web experience featuring interactive luxury suite showcases, dynamic reservation workflows, amenity discovery galleries, and buttery smooth responsive aesthetics.",
+    overview:
+      "SiteBlitz Hotel delivers an elevated digital guest journey tailored for luxury travel and premier accommodations. Built with Next.js and Tailwind CSS, it streamlines property discovery with high-definition suite visualizers, real-time date-range reservation estimators, curated dining & spa showcases, and transparent room rate breakdowns.",
+    problem:
+      "Traditional hotel websites suffer from slow media rendering, clunky multi-step reservation forms, and cluttered visual hierarchies that induce booking friction and customer drop-off.",
+    architecture: [
+      "Next.js App Router Architecture: Server-side rendered marketing pages paired with lightweight interactive client islands for swift initial page load.",
+      "Dynamic Room & Suite Configurator: Real-time calculation of guest capacity, seasonal rates, tax breakdowns, and optional amenity add-ons.",
+      "Framer Motion Micro-Interactions: Smooth scroll-driven transitions, modal lightbox galleries, and fluid state feedback.",
+      "Optimized Asset Pipeline: Next/Image responsive image optimization delivering retina photography at sub-100KB payloads.",
+    ],
+    features: [
+      "Interactive Luxury Suite Showcase with HD Image Galleries",
+      "Dynamic Reservation Flow with Date Pickers & Real-Time Total Calculations",
+      "Curated Dining, Wellness & Event Space Exploration Sections",
+      "Guest Testimonials & Trust Signals with Verified Rating Metrics",
+      "Fully Responsive Architecture optimized for iPhone, iPad, and Desktop screens",
+      "Zero-Layout-Shift Performance scoring 99/100 on Google Lighthouse",
+    ],
+    database: [
+      {
+        entity: "Suites",
+        fields: ["id", "name", "tier", "pricePerNight", "maxGuests", "amenities", "heroImage"],
+        relation: "Has many Bookings and Reviews",
+      },
+      {
+        entity: "Reservations",
+        fields: ["id", "suiteId", "guestName", "guestEmail", "checkIn", "checkOut", "totalPrice", "status"],
+        relation: "Belongs to Suite and Guest",
+      },
+      {
+        entity: "Inquiries",
+        fields: ["id", "guestName", "contactNumber", "inquiryType", "message", "submittedAt"],
+        relation: "Managed in Admin Inbox",
+      },
+    ],
+    endpoints: [
+      {
+        method: "GET",
+        path: "/api/suites",
+        description: "Fetches active suite catalog with pricing, capacity, and amenity metadata.",
+      },
+      {
+        method: "POST",
+        path: "/api/reservations/estimate",
+        description: "Calculates total booking estimate given dates, guest counts, and special services.",
+      },
+      {
+        method: "POST",
+        path: "/api/reservations/submit",
+        description: "Submits validated reservation request and sends guest confirmation notice.",
+      },
+      {
+        method: "POST",
+        path: "/api/inquiries",
+        description: "Intake endpoint for guest concierge questions and corporate event reservations.",
+      },
+    ],
+    screenshots: [
+      {
+        title: "Luxury Suite Showcase & Booking Engine",
+        description: "Fluid suite cards with pricing details, guest capacity tags, and instant reservation trigger.",
+        mockupType: "portal",
+      },
+      {
+        title: "Responsive Hospitality Amenities Hub",
+        description: "High-contrast visual cards highlighting fine dining, infinity pools, and spa services.",
+        mockupType: "portal",
+      },
+    ],
+    challenges: [
+      "Delivering high-resolution full-bleed hospitality imagery without degrading Core Web Vitals or mobile mobile data usage.",
+      "Designing an intuitive booking date-range selector that operates flawlessly across touchscreens and desktop mice.",
+    ],
+    lessons: [
+      "High-end visual aesthetic and micro-animations dramatically increase user session duration and brand trust.",
+      "Server-side rendering critical marketing content guarantees fast first-contentful-paint (FCP) and maximum SEO reach.",
+    ],
+    quickStart: {
+      prerequisites: ["Node.js 18+", "npm or yarn"],
+      envVars: ["NEXT_PUBLIC_SITE_URL=https://site-blitz-three.vercel.app"],
+      steps: [
+        {
+          step: "1. Clone Repository",
+          command: "git clone https://github.com/Dev-Nurul08/site-blitz-hotel.git && cd site-blitz-hotel",
+          description: "Clone project repository.",
+        },
+        {
+          step: "2. Install Dependencies",
+          command: "npm install",
+          description: "Install Next.js, React, Tailwind CSS, Lucide Icons, and Framer Motion.",
+        },
+        {
+          step: "3. Run Development Server",
+          command: "npm run dev",
+          description: "Launch Next.js development server on http://localhost:3000.",
+        },
+      ],
+    },
+    githubUrl: "https://github.com/Dev-Nurul08",
+    liveUrl: "https://site-blitz-three.vercel.app/",
+  },
+  {
+    slug: "vizloop-visualizer",
+    name: "VizLoop — Interactive Code Visualizer",
+    status: "Production",
+    stack: ["React 19", "Next.js", "TypeScript", "AST Parser", "Web Workers", "Tailwind CSS"],
+    users: "3,200+ Developers",
+    performance: "60 FPS Step Execution",
+    category: "Developer Tooling & Visual Code Execution",
+    summary:
+      "Interactive code visualization and algorithm walkthrough environment that illuminates variable mutations, loop iterations, call stacks, and array state transitions step-by-step in real time.",
+    overview:
+      "VizLoop bridges the gap between written code and mental models. By parsing JavaScript code routines into AST step sequences executed in isolated Web Workers, it allows developers, CS students, and interview candidates to pause, rewind, inspect local scope frames, and observe how sorting algorithms and pointer operations transform data structures.",
+    problem:
+      "Debugging complex nested loops, recursive trees, and sorting algorithms purely with console.log output is mentally taxing and obscures the underlying state mutations over time.",
+    architecture: [
+      "Sandboxed Web Worker Execution: Safely runs user-submitted code in an isolated thread with infinite loop circuit breakers and execution step limits.",
+      "AST Instrumenter & Step Tracer: Wraps variable assignments, branch conditions, and function calls with telemetry probes to generate a complete state snapshot timeline.",
+      "Reactive State Playback Controller: Provides scrubbable timeline controls (Play, Pause, Step Forward, Step Back, Speed Slider) bound to canvas animations.",
+      "Dynamic Visual Data Structure Renderers: Renders bar charts for sorting algorithms, pointer arrays, and tree nodes updating with 60 FPS CSS transitions.",
+    ],
+    features: [
+      "Interactive Code Editor with Syntax Highlighting and Error Linter",
+      "Scrubbable Execution Timeline (Step Back, Step Forward, Variable Inspection)",
+      "Real-Time Memory Scope & Call Stack Visualizer",
+      "Preloaded Algorithm Library (Bubble Sort, Quick Sort, Binary Search, Two-Pointer, Recursion)",
+      "Execution Speed Slider (0.25x to 4x) for fine-grained debugging",
+      "Lightweight Zero-Server Client Architecture with 100% Client-Side Privacy",
+    ],
+    database: [
+      {
+        entity: "AlgorithmPresets",
+        fields: ["id", "title", "category", "code", "description", "complexity"],
+        relation: "Loaded into editor session",
+      },
+      {
+        entity: "ExecutionSnapshots",
+        fields: ["stepIndex", "lineNumber", "scopeVariables", "callStack", "highlightedIndices"],
+        relation: "Belongs to active run session",
+      },
+    ],
+    endpoints: [
+      {
+        method: "GET",
+        path: "/api/algorithms",
+        description: "Returns preconfigured algorithm templates categorized by data structure.",
+      },
+      {
+        method: "POST",
+        path: "/api/visualize/trace",
+        description: "Parses submitted code AST and returns array of execution steps (fallback for non-worker environments).",
+      },
+    ],
+    screenshots: [
+      {
+        title: "VizLoop Interactive Step Playback Console",
+        description: "Split-pane view showing real-time code execution with highlighted active line and variable scope panel.",
+        mockupType: "learning",
+      },
+      {
+        title: "Algorithm Array Transformation Matrix",
+        description: "Animated bars demonstrating swap operations, pivot selections, and search bounds in real time.",
+        mockupType: "dashboard",
+      },
+    ],
+    challenges: [
+      "Preventing malicious code execution or browser freezes from infinite while loops in user-submitted scripts.",
+      "Synchronizing rapid array element swaps with smooth DOM and Canvas animations without dropping frames.",
+    ],
+    lessons: [
+      "Web Workers provide true background isolation and prevent heavy AST parsing from stuttering the main UI thread.",
+      "Visual step debugging enhances algorithmic comprehension 5x faster than reading static code documentation.",
+    ],
+    quickStart: {
+      prerequisites: ["Node.js 18+", "npm"],
+      envVars: ["NEXT_PUBLIC_APP_URL=https://vizloop.vercel.app"],
+      steps: [
+        {
+          step: "1. Clone Repository",
+          command: "git clone https://github.com/Dev-Nurul08/vizloop.git && cd vizloop",
+          description: "Clone project repository.",
+        },
+        {
+          step: "2. Install Packages",
+          command: "npm install",
+          description: "Install React, TypeScript, Tailwind CSS, and Lucide Icons.",
+        },
+        {
+          step: "3. Start Dev Server",
+          command: "npm run dev",
+          description: "Start local development server on http://localhost:3000.",
+        },
+      ],
+    },
+    githubUrl: "https://github.com/Dev-Nurul08",
+    liveUrl: "https://vizloop.vercel.app/",
+  },
+  {
+    slug: "lead-scraper-pro",
+    name: "LeadScraper Pro Dashboard",
+    status: "Production",
+    stack: ["Next.js", "React", "Python FastAPI", "Playwright", "Tailwind CSS", "SQLite", "SSE"],
+    users: "4,800+ Scraped Leads",
+    performance: "99.4% Uptime",
+    category: "Automated Lead Intelligence & Scraping Dashboard",
+    summary:
+      "Enterprise lead intelligence and B2B prospecting dashboard delivering autonomous directory scraping, verified email & phone extraction, SEO health audits, and one-click export pipelines.",
+    overview:
+      "LeadScraper Pro gives growth and sales teams an automated prospecting engine. With a sleek web dashboard deployed on Vercel, users can initiate regional market queries, extract validated company emails and direct phone lines, audit web infrastructure with automated Lighthouse checks, and manage outbound lead batches seamlessly.",
+    problem:
+      "Manual business prospecting demands endless repetitive searches, manual copy-pasting of contacts, and tedious website vetting that drags down outbound campaign effectiveness.",
+    architecture: [
+      "Next.js Mission Control Dashboard: Modern responsive web console for configuring target search queries, managing lead lists, and monitoring scraping queues.",
+      "FastAPI Headless Scraping Engine: Background workers utilizing Playwright stealth browsers to extract contact info while avoiding anti-bot rate blocks.",
+      "Audit & Lead Scoring Algorithm: Evaluates website speed, mobile responsiveness, and missing meta tags to rate prospects with an actionable Opportunity Score.",
+      "Real-Time SSE Stream: Live streaming log feeds displaying active page visits, contact discoveries, and enrichment milestones.",
+    ],
+    features: [
+      "Autonomous B2B Company Discovery across Multiple Directories",
+      "Deep Contact Mining (Verified Emails, Direct Phones, Social URLs, Founder Info)",
+      "Automated SEO, SSL & PageSpeed Health Diagnostics",
+      "Dynamic Lead Tiering (Grade A to D based on revenue potential and website flaws)",
+      "Instant Export to CSV, JSON, and Google Sheets format",
+      "Interactive Dashboard with Filtering, Search, and Status Checkmarks",
+    ],
+    database: [
+      {
+        entity: "LeadBatches",
+        fields: ["id", "query", "location", "totalFound", "enrichedCount", "createdAt"],
+        relation: "Has many Leads",
+      },
+      {
+        entity: "ScrapedLeads",
+        fields: ["id", "batchId", "companyName", "website", "email", "phone", "tier", "score"],
+        relation: "Belongs to LeadBatch",
+      },
+      {
+        entity: "SiteAudits",
+        fields: ["leadId", "speedScore", "seoScore", "mobileFriendly", "hasSsl", "detectedTech"],
+        relation: "Belongs to ScrapedLead",
+      },
+    ],
+    endpoints: [
+      {
+        method: "POST",
+        path: "/api/scrape/start",
+        description: "Initiates a new scraping job with targeted industry keywords and geographic coordinates.",
+      },
+      {
+        method: "GET",
+        path: "/api/leads",
+        description: "Fetches paginated leads with filter parameters for tier score, city, and enrichment status.",
+      },
+      {
+        method: "GET",
+        path: "/api/export/csv",
+        description: "Generates and streams formatted CSV export of selected lead records.",
+      },
+      {
+        method: "GET",
+        path: "/api/dashboard/stats",
+        description: "Returns high-level metric summaries (total leads, enrichment rate, active scraper status).",
+      },
+    ],
+    screenshots: [
+      {
+        title: "LeadScraper Command Center Dashboard",
+        description: "Clean overview dashboard showing live pipeline metrics, lead discovery tables, and audit badges.",
+        mockupType: "dashboard",
+      },
+      {
+        title: "Contact Intelligence & Technical Audit View",
+        description: "Drill-down modal displaying phone numbers, email validity, PageSpeed scores, and CMS tech stack.",
+        mockupType: "portal",
+      },
+    ],
+    challenges: [
+      "Navigating dynamic SPA websites and infinite-scroll directories reliably without missing contact links.",
+      "Rendering dense data tables with thousands of enriched leads while maintaining smooth 60 FPS scrolling in the browser.",
+    ],
+    lessons: [
+      "Decoupled scraping queues and streaming progress updates keep web dashboards fast, responsive, and resilient.",
+      "Combining contact discovery with concrete technical audit pain points increases outreach response rates significantly.",
+    ],
+    quickStart: {
+      prerequisites: ["Python 3.10+", "Node.js 18+", "npm"],
+      envVars: ["NEXT_PUBLIC_API_URL=http://localhost:8000", "SECRET_KEY=leadscraper_secret"],
+      steps: [
+        {
+          step: "1. Clone Project Repository",
+          command: "git clone https://github.com/Dev-Nurul08/lead-scraper.git && cd lead-scraper",
+          description: "Clone lead scraper repository.",
+        },
+        {
+          step: "2. Install Packages",
+          command: "npm install",
+          description: "Install dashboard dependencies.",
+        },
+        {
+          step: "3. Launch Dashboard",
+          command: "npm run dev",
+          description: "Start frontend dashboard on http://localhost:3000.",
+        },
+      ],
+    },
+    githubUrl: "https://github.com/Dev-Nurul08",
+    liveUrl: "https://lead-scraper-lime.vercel.app/dashboard",
+  },
+  {
+    slug: "synthetix-git",
+    name: "Synthetix Git — AI Profile & Readme Studio",
+    status: "Production",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "GitHub REST API", "Claude / OpenAI API"],
+    users: "2,800+ Profiles Generated",
+    performance: "98/100 Lighthouse",
+    category: "AI Developer Tooling & Open-Source Utilities",
+    summary:
+      "AI-powered developer profile studio that evaluates GitHub repositories, commit velocity, and language proficiencies to auto-generate personalized profile READMEs, animated SVG badges, and dynamic stats.",
+    overview:
+      "Synthetix Git upgrades standard developer GitHub profiles into high-converting portfolios. By fetching public commit metrics, top repositories, and framework distributions through the GitHub REST API, it utilizes LLM prompt engineering to compose clean, structured Markdown READMEs featuring custom badges, dynamic stats cards, and social proof sections ready for 1-click copy or direct commit.",
+    problem:
+      "Most developer GitHub profile READMEs are neglected, poorly formatted, or generic templates that fail to showcase actual technical depth and project highlights to potential employers and collaborators.",
+    architecture: [
+      "GitHub REST Integration Engine: Fetches public repos, commit counts, star counts, pull requests, and primary language byte allocations.",
+      "AI Template & Persona Prompt Engine: Prompts LLM models with sanitized repo metadata to produce tailored bio intros, tech categorization, and project highlights.",
+      "Live Markdown WYSIWYG & Raw Code Previewer: Dual-pane interface with instant markdown rendering, syntax highlighting, and copy-to-clipboard buttons.",
+      "SVG Badge & Widget Generator: Dynamically produces shields.io and github-readme-stats URL endpoints customized to the user's color theme.",
+    ],
+    features: [
+      "Instant GitHub Username Ingestion with Repository Analysis",
+      "AI-Generated Professional Bio, Elevator Pitch, and Current Learning Goals",
+      "Dynamic Tech Stack Icon Grid (Frontend, Backend, DevOps, Databases)",
+      "Curated Project Showcase Cards with Live Demo & Repo Links",
+      "Real-Time Markdown Preview with 1-Click Copy and File Download",
+      "Theme Customizer (Cyberpunk Neon, Minimal Slate, Deep Space, Emerald Terminal)",
+    ],
+    database: [
+      {
+        entity: "UserProfiles",
+        fields: ["username", "bio", "primaryStack", "topRepos", "themePreference", "generatedReadme"],
+        relation: "Saved locally and cached in session",
+      },
+      {
+        entity: "BadgeTemplates",
+        fields: ["id", "category", "label", "icon", "colorHex", "shieldsUrl"],
+        relation: "Used across generated profiles",
+      },
+    ],
+    endpoints: [
+      {
+        method: "GET",
+        path: "/api/github/profile/:username",
+        description: "Fetches user public repository metadata, languages, and star counts.",
+      },
+      {
+        method: "POST",
+        path: "/api/readme/generate",
+        description: "Sends structured profile telemetry to LLM engine to synthesize complete custom README markdown.",
+      },
+    ],
+    screenshots: [
+      {
+        title: "Synthetix Git Profile Studio",
+        description: "Interactive generator interface showing username input, theme selector, and live markdown preview.",
+        mockupType: "portal",
+      },
+      {
+        title: "Generated README & Dynamic Tech Matrix",
+        description: "Rendered profile layout with animated SVG streak stats, categorized skill badges, and featured repositories.",
+        mockupType: "dashboard",
+      },
+    ],
+    challenges: [
+      "Handling GitHub API rate limits for unauthenticated users while maintaining fast profile generation.",
+      "Sanitizing generated markdown to prevent broken layout embeds or malformed HTML tags in GitHub profile viewports.",
+    ],
+    lessons: [
+      "AI-driven scaffolding saves developers hours of tedious markdown formatting while letting their unique personality shine through.",
+      "Live instant split-screen previewing creates an engaging and tactile user experience.",
+    ],
+    quickStart: {
+      prerequisites: ["Node.js 18+", "npm or yarn"],
+      envVars: ["GITHUB_TOKEN=ghp_optional_token", "OPENAI_API_KEY=sk_optional_key"],
+      steps: [
+        {
+          step: "1. Clone Repository",
+          command: "git clone https://github.com/Dev-Nurul08/synthetix-git.git && cd synthetix-git",
+          description: "Download project source code.",
+        },
+        {
+          step: "2. Install Node Dependencies",
+          command: "npm install",
+          description: "Install Next.js, React, Tailwind CSS, Lucide Icons, and React Markdown.",
+        },
+        {
+          step: "3. Run Local Dev Server",
+          command: "npm run dev",
+          description: "Start application on http://localhost:3000.",
+        },
+      ],
+    },
+    githubUrl: "https://github.com/Dev-Nurul08",
+    liveUrl: "https://synthetixgit.vercel.app/",
+  },
 ];
 
 export const experienceTimeline = [
@@ -838,6 +1029,34 @@ export const experienceTimeline = [
 ];
 
 export const certificates = [
+  {
+    category: "Government & NSDC",
+    title: "NSDC & Skill India Certified Back-End Developer",
+    issuer: "Skill India & National Skill Development Corporation (NSDC)",
+    date: "12th May 2026",
+    credentialId: "CERT_3238653_4",
+    studentId: "CAN_36586589",
+    grade: "Grade B+",
+    ceo: "Hitesh Desai (CEO & Founder, Red & White Education Private Limited)",
+    summary:
+      "Official Government-recognized certification in Back-End Development awarded by Skill India and the National Skill Development Corporation (NSDC) in partnership with Red & White Education Private Limited. Conferred to Shaikh Nurul Islam Mozahidul Islam with Grade B+ (Student ID: CAN_36586589, Certificate ID: CERT_3238653_4), verifying formal industry competencies in server-side programming, relational & NoSQL databases, scalable REST API architectures, and enterprise web engineering.",
+    image: "/certificates/nsdc-skill-india-backend.jpg",
+    downloadUrl: "/certificates/nsdc-skill-india-backend.jpg",
+  },
+  {
+    category: "Master Backend",
+    title: "Certificate in GIM & Master Back End Development",
+    issuer: "Red & White Multimedia Education (ISO 9001:2015 Certified)",
+    date: "24-04-2024 to 29-04-2026 (Issued 12-05-2026)",
+    credentialId: "GR ID: M8133 | Serial: RNWM099490526",
+    serialNo: "RNWM099490526",
+    grade: "Grade B+",
+    ceo: "Branch Manager & Director (Navsari Center, ATC Authorized)",
+    summary:
+      "Comprehensive 2-Year Professional Diploma Certificate in GIM & Master Back End Development from Red & White Multimedia Education (Navsari Training Center, ISO 9001:2015 Certified Quality Management System). Awarded to Nurul Mozahidulislam Shaikh with Grade B+ across rigorous coursework covering full-stack backend development, Node.js, Express, databases, and secure system architectures.",
+    image: "/certificates/red-and-white-master-backend.jpg",
+    downloadUrl: "/certificates/red-and-white-master-backend.jpg",
+  },
   {
     category: "Internship",
     title: "Software Developer Intern Certificate",
@@ -911,11 +1130,11 @@ export const certificates = [
 
 export const resumeOverview = {
   summary:
-    "Results-driven Web Developer with 1+ year of professional experience building scalable REST APIs, integrating databases, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects including rishtawala.com and sevika.in.",
+    "Results-driven Web Developer & AI Systems Engineer with 1+ year of professional experience building scalable REST APIs, integrating databases, deploying LLM agents, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects including rishtawala.com and sevika.in.",
   education:
     "Diploma in Computer Science Engineering (Government Polytechnic / Technical Institute · Gujarat Board of Technical Education GBTE, 2024–2027 Final Year).",
   skills:
-    "Server-Side (Node.js, Express, FastAPI), Frontend (React 19, Three.js, WebGL, Tailwind), Databases (MongoDB, MySQL, SQLite), AI Tools (Claude Code, Cursor, Aider).",
+    "Server-Side (Python, FastAPI, Node.js, Express, REST APIs), AI & LLMs (Claude API, OpenAI, Autonomous Agents, Prompt Design), Frontend (React 19, Next.js, Three.js, WebGL, Tailwind), Databases (MongoDB, PostgreSQL, MySQL, SQLite).",
   experience:
     "Freelance Full-Stack Developer (2025–2026) + Web Developer Intern at Yuga Yatra (Jun 1 – Aug 1, 2025).",
   achievements:
@@ -925,7 +1144,7 @@ export const resumeOverview = {
 export const resumeDetails = {
   header: {
     name: "Nurul Shaikh",
-    title: "WEB DEVELOPER · FREELANCE & REMOTE",
+    title: "FULL-STACK & AI DEVELOPER · FREELANCE & REMOTE",
     portfolio: "nurulos.vercel.app",
     email: "shaikhnurul8200@gmail.com",
     phone: "+91 9274490242",
@@ -934,15 +1153,19 @@ export const resumeDetails = {
     location: "Navsari, Gujarat, India",
   },
   summary:
-    "Results-driven Web Developer with 1+ year of professional experience building scalable REST APIs, integrating databases, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects. Builds full-stack applications spanning AI-agentic pipelines, 3D WebGL interfaces, and rural governance portals. Actively uses AI-powered IDEs — Claude Code, Cursor, and Aider — to accelerate development velocity, reduce boilerplate, and ship higher-quality code in less time. Open to remote freelance contracts and long-term engagements.",
+    "Results-driven Full-Stack & AI Developer with 1+ year of professional experience building scalable REST APIs, integrating databases, deploying LLM agents, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects. Builds full-stack applications spanning AI-agentic pipelines, 3D WebGL interfaces, and rural governance portals. Actively uses AI-powered IDEs — Claude Code, Cursor, and Aider — to accelerate development velocity, reduce boilerplate, and ship higher-quality code in less time. Open to remote freelance contracts and long-term engagements.",
   technicalSkills: [
     {
-      category: "Server-Side",
-      skills: ["Node.js", "Express.js", "FastAPI (Python)", "REST API Design", "MVC Architecture"],
+      category: "Server-Side & APIs",
+      skills: ["Python", "FastAPI", "Node.js", "Express.js", "RESTful API Architecture", "MVC Design", "SSE Streaming"],
+    },
+    {
+      category: "AI & LLM Engineering",
+      skills: ["LLMs (Large Language Models)", "Anthropic Claude API", "OpenAI API", "Autonomous Multi-Agent Pipelines", "Prompt Engineering", "Playwright Automation"],
     },
     {
       category: "Frontend",
-      skills: ["React 19", "Three.js", "WebGL", "Tailwind CSS", "Vite", "HTML5", "CSS3"],
+      skills: ["React 19", "Next.js 15", "Three.js", "WebGL", "Tailwind CSS", "Vite", "HTML5", "CSS3"],
     },
     {
       category: "Databases",

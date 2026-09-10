@@ -80,15 +80,22 @@ export function CertificateExplorer() {
             </div>
 
             {/* Direct Download Button for Real Certificate */}
-            <a
-              href={selected.downloadUrl || selected.image}
-              download={`${selected.title.replace(/[^a-zA-Z0-9]/g, "_")}.svg`}
-              target="_blank"
-              rel="noreferrer"
-              className="button-scale inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-4 py-2 text-xs font-bold text-slate-950 hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/20"
-            >
-              <Download className="size-4" /> Download Certificate
-            </a>
+            {(() => {
+              const fileUrl = selected.downloadUrl || selected.image;
+              const fileExt = fileUrl.endsWith(".jpg") ? "jpg" : fileUrl.endsWith(".png") ? "png" : "svg";
+              const downloadName = `${selected.title.replace(/[^a-zA-Z0-9]/g, "_")}.${fileExt}`;
+              return (
+                <a
+                  href={fileUrl}
+                  download={downloadName}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button-scale inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-4 py-2 text-xs font-bold text-slate-950 hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/20"
+                >
+                  <Download className="size-4" /> Download Certificate
+                </a>
+              );
+            })()}
           </div>
         </div>
 
@@ -108,13 +115,20 @@ export function CertificateExplorer() {
                   <ShieldCheck className="size-4 text-emerald-500" />
                   <span>Authentic Verified Document issued by <strong className="text-[var(--app-text)]">{selected.issuer}</strong></span>
                 </div>
-                <a
-                  href={selected.downloadUrl || selected.image}
-                  download={`${selected.title.replace(/[^a-zA-Z0-9]/g, "_")}.svg`}
-                  className="text-emerald-400 hover:underline font-semibold flex items-center gap-1"
-                >
-                  <Download className="size-3.5" /> Download High-Res File
-                </a>
+                {(() => {
+                  const fileUrl = selected.downloadUrl || selected.image;
+                  const fileExt = fileUrl.endsWith(".jpg") ? "jpg" : fileUrl.endsWith(".png") ? "png" : "svg";
+                  const downloadName = `${selected.title.replace(/[^a-zA-Z0-9]/g, "_")}.${fileExt}`;
+                  return (
+                    <a
+                      href={fileUrl}
+                      download={downloadName}
+                      className="text-emerald-400 hover:underline font-semibold flex items-center gap-1"
+                    >
+                      <Download className="size-3.5" /> Download High-Res File
+                    </a>
+                  );
+                })()}
               </div>
             </div>
           ) : (

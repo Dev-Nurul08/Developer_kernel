@@ -20,25 +20,30 @@ export const metadata: Metadata = {
     template: "%s | Nurul Shaikh"
   },
   description:
-    "Official portfolio of Nurul Shaikh — Full-Stack Developer & Software Architect specializing in Node.js, React, Next.js, TypeScript, MongoDB, and modern high-performance web systems.",
+    "Official portfolio of Nurul Shaikh — Full-Stack Developer & Software Architect specializing in Node.js, React, Next.js, TypeScript, Python, FastAPI, MongoDB, and modern high-performance web systems.",
   keywords: [
     "Nurul Shaikh",
     "Nurul Shaikh Full-Stack Developer",
+    "Nurul Shaikh Web Developer",
     "Nurul Shaikh Developer",
     "Nurul Shaikh Portfolio",
     "Nurul Shaikh Software Engineer",
-    "Full-Stack Developer",
-    "Full Stack Developer",
-    "Full-Stack Web Developer",
-    "Nurul Shaikh Software Architect",
+    "Nurul Shaikh Backend Developer",
     "Nurul Shaikh React Developer",
     "Nurul Shaikh Node.js Developer",
-    "Software Engineer Portfolio",
-    "Nurul OS",
-    "Developer Kernel",
-    "SaaS Portfolio",
-    "Three.js Portfolio",
-    "Web Application Design"
+    "Nurul Shaikh GitHub",
+    "Nurul Shaikh India",
+    "Nurul Shaikh Navsari",
+    "Nurul Shaikh Projects",
+    "Full-Stack Developer",
+    "Full Stack Developer Portfolio",
+    "Backend Engineer",
+    "Software Architect",
+    "Next.js Developer",
+    "FastAPI Python Developer",
+    "Three.js 3D WebGL",
+    "Web Application Architecture",
+    "Interactive Arcade Games"
   ],
   authors: [{ name: "Nurul Shaikh", url: "https://github.com/Dev-Nurul08" }],
   creator: "Nurul Shaikh",
@@ -48,7 +53,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Nurul Shaikh | Full-Stack Developer & Software Architect",
-    description: "Explore the personal operating system and full-stack software development work of Nurul Shaikh.",
+    description: "Explore the verified production projects, case studies, backend architecture, credentials, and interactive arcade games of Nurul Shaikh.",
     url: "https://github.com/Dev-Nurul08",
     siteName: "Nurul Shaikh - Full-Stack Developer",
     images: [
@@ -56,7 +61,7 @@ export const metadata: Metadata = {
         url: "/profile.png",
         width: 800,
         height: 800,
-        alt: "Nurul Shaikh - Full-Stack Developer",
+        alt: "Nurul Shaikh - Full-Stack Developer & Software Architect",
       },
     ],
     type: "website",
@@ -64,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nurul Shaikh | Full-Stack Developer",
-    description: "Explore the personal operating system and full-stack software development work of Nurul Shaikh.",
+    title: "Nurul Shaikh | Full-Stack Developer & Software Architect",
+    description: "Explore the verified production projects, case studies, backend architecture, credentials, and interactive arcade games of Nurul Shaikh.",
     images: ["/profile.png"],
     creator: "@Dev_Nurul08"
   },
@@ -89,10 +94,11 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://github.com/Dev-Nurul08#person",
       "name": "Nurul Shaikh",
-      "alternateName": ["Nurul", "Dev-Nurul08"],
-      "jobTitle": "Full-Stack Developer",
-      "description": "Nurul Shaikh is a Full-Stack Developer & Software Architect specializing in Node.js, React, Next.js, and scalable web architecture.",
+      "alternateName": ["Nurul", "Dev-Nurul08", "Nurul Mozahidulislam Shaikh"],
+      "jobTitle": "Full-Stack Developer & Software Architect",
+      "description": "Nurul Shaikh is a Full-Stack Developer & Software Architect specializing in Node.js, React, Next.js, Python, FastAPI, TypeScript, MongoDB, and enterprise web architecture.",
       "url": "https://github.com/Dev-Nurul08",
+      "image": "https://github.com/Dev-Nurul08/Developer_kernel/raw/main/public/profile.png",
       "sameAs": [
         "https://github.com/Dev-Nurul08",
         "https://www.linkedin.com/in/nurul-shaikh/",
@@ -102,23 +108,49 @@ const jsonLd = {
       "knowsAbout": [
         "Full-Stack Development",
         "Software Architecture",
+        "Backend Engineering",
+        "Node.js",
+        "Express.js",
         "React",
         "Next.js",
-        "Node.js",
         "TypeScript",
+        "Python",
+        "FastAPI",
         "MongoDB",
-        "Backend Engineering"
-      ]
+        "MySQL",
+        "REST APIs",
+        "Three.js & WebGL",
+        "Playwright Web Scraping",
+        "Generative AI Integration"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Full-Stack Software Engineer",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "India"
+        }
+      }
     },
     {
       "@type": "WebSite",
-      "name": "Nurul Shaikh - Full-Stack Developer",
+      "@id": "https://github.com/Dev-Nurul08#website",
+      "name": "Nurul Shaikh Portfolio",
       "url": "https://github.com/Dev-Nurul08",
       "author": {
         "@type": "Person",
         "name": "Nurul Shaikh"
       },
-      "description": "Official portfolio and software development work of Nurul Shaikh, Full-Stack Developer."
+      "description": "Official portfolio, production projects, system architecture, and interactive developer tools by Nurul Shaikh."
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://github.com/Dev-Nurul08#profilepage",
+      "url": "https://github.com/Dev-Nurul08",
+      "name": "Nurul Shaikh — Full-Stack Developer Profile",
+      "mainEntity": {
+        "@id": "https://github.com/Dev-Nurul08#person"
+      }
     }
   ]
 };

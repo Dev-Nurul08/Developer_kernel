@@ -12,6 +12,7 @@ import {
   CheckCircle2,
   Cpu,
   Database,
+  Gamepad2,
   GitBranch,
   Server,
   Mail,
@@ -158,6 +159,13 @@ export default function Home() {
               className="button-scale inline-flex h-11 items-center gap-2 rounded-lg border border-[var(--app-border)] bg-[var(--app-bg)] px-4 text-sm font-semibold hover:border-emerald-500/40"
             >
               Resume Overview
+            </Link>
+            <Link
+              href="/games"
+              className="button-scale inline-flex h-11 items-center gap-2 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-4 text-sm font-semibold text-emerald-400 hover:bg-emerald-500/20 transition-colors"
+            >
+              <Gamepad2 className="size-4" aria-hidden="true" />
+              Arcade (6 Games)
             </Link>
           </div>
         </div>

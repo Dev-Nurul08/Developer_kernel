@@ -7,6 +7,7 @@ import {
   Code2,
   FileText,
   FolderKanban,
+  Gamepad2,
   LayoutDashboard,
   MailPlus,
   Sparkles,
@@ -38,6 +39,7 @@ const navItems = [
   { label: "Projects", href: "/projects", icon: FolderKanban },
   { label: "Experience", href: "/experience", icon: Timeline },
   { label: "Certificates", href: "/certificates", icon: Award },
+  { label: "Arcade Games", href: "/games", icon: Gamepad2 },
   { label: "Contact", href: "/contact", icon: MailPlus },
   { label: "Resume", href: "/resume", icon: FileText },
 ];
@@ -115,8 +117,8 @@ export function AppShell({ children }: { children: ReactNode }) {
             <Sparkles className="size-5 text-emerald-500" aria-hidden="true" />
           </div>
           <div className="hidden lg:block">
-            <p className="text-sm font-semibold">Nurul OS v1.0</p>
-            <p className="text-xs text-[var(--app-muted)]">Developer Platform</p>
+            <p className="text-sm font-semibold truncate">Nurul Shaikh</p>
+            <p className="text-xs text-[var(--app-muted)]">Full-Stack Developer</p>
           </div>
         </div>
 
@@ -193,7 +195,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <div className="min-w-0">
               <p className="truncate text-sm font-semibold">{activeLabel}</p>
               <p className="truncate text-xs text-[var(--app-muted)]">
-                Personal Operating System
+                Nurul Shaikh Portfolio
               </p>
             </div>
           </div>
