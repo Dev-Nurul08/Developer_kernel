@@ -96,12 +96,11 @@ export default async function ProjectDetailPage({
         </div>
       </MotionSection>
 
-      <MotionSection className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <MotionSection className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {[
-          ["Status", project.status],
-          ["Stack", project.stack.join(", ")],
-          ["Throughput / Users", project.users],
-          ["Performance", project.performance],
+          ["Project Status", project.status],
+          ["Project Scope", "Personal Project"],
+          ["Core Technologies", project.stack.join(", ")],
         ].map(([label, value]) => (
           <div
             key={label}

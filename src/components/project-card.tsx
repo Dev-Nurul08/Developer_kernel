@@ -1,6 +1,6 @@
 import type { Project } from "@/lib/data";
 import { systemProfile } from "@/lib/data";
-import { ArrowRight, ExternalLink, Gauge, GitBranch, Users } from "lucide-react";
+import { ArrowRight, ExternalLink, GitBranch } from "lucide-react";
 import Link from "next/link";
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -31,22 +31,6 @@ export function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      <div className="mt-5 grid grid-cols-2 gap-3">
-        <div className="lift-card glass-tile rounded-lg p-3 hover:border-emerald-500/30">
-          <div className="flex items-center gap-2 text-xs text-[var(--app-muted)]">
-            <Users className="size-4 text-[var(--app-soft)]" aria-hidden="true" />
-            Users
-          </div>
-          <p className="mt-2 text-lg font-semibold">{project.users}</p>
-        </div>
-        <div className="lift-card glass-tile rounded-lg p-3 hover:border-emerald-500/30">
-          <div className="flex items-center gap-2 text-xs text-[var(--app-muted)]">
-            <Gauge className="size-4 text-[var(--app-soft)]" aria-hidden="true" />
-            Performance
-          </div>
-          <p className="mt-2 text-lg font-semibold text-emerald-500">{project.performance}</p>
-        </div>
-      </div>
 
       <div className="mt-5 flex flex-wrap gap-2">
         {project.liveUrl && project.liveUrl.startsWith("http") && (

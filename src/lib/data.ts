@@ -1138,7 +1138,7 @@ export const resumeOverview = {
   experience:
     "Freelance Full-Stack Developer (2025–2026) + Web Developer Intern at Yuga Yatra (Jun 1 – Aug 1, 2025).",
   achievements:
-    "Shipped 3D WebGL E-Commerce, AI Agentic B2B pipelines, and rural governance platforms serving 10,000+ citizens solo.",
+    "Built and deployed interactive 3D WebGL platforms, full-stack Next.js web systems, AI agentic pipelines, and community portal applications.",
 };
 
 export const resumeDetails = {
