@@ -166,7 +166,7 @@ export function ContactTicket() {
               >
                 <option className="bg-[var(--app-card)] text-[var(--app-text)]" value="Full Stack Web Application">Full Stack Web Application</option>
                 <option className="bg-[var(--app-card)] text-[var(--app-text)]" value="AI & LLM Integration">AI &amp; LLM Integration</option>
-                <option className="bg-[var(--app-card)] text-[var(--app-text)]" value="Python / FastAPI Backend API">Python / FastAPI Backend API</option>
+                <option className="bg-[var(--app-card)] text-[var(--app-text)]" value="Full-Stack JS / Node.js Backend API">Full-Stack JS / Node.js Backend API</option>
                 <option className="bg-[var(--app-card)] text-[var(--app-text)]" value="SaaS Platform Development">SaaS Platform Development</option>
                 <option className="bg-[var(--app-card)] text-[var(--app-text)]" value="Dashboard & Data Visualization">Dashboard &amp; Data Visualization</option>
                 <option className="bg-[var(--app-card)] text-[var(--app-text)]" value="Freelance / Contract Role">Freelance / Contract Role</option>

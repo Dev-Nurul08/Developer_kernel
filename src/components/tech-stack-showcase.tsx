@@ -15,8 +15,7 @@ import {
   SiNextdotjs,
   SiReact,
   SiPostgresql,
-  SiPython,
-  SiFastapi,
+  SiTypescript,
   SiOpenai,
   SiAnthropic,
 } from "react-icons/si";
@@ -37,17 +36,17 @@ import {
 
 /* ── Primary Tech Stack ── */
 const primaryStack = [
-  { label: "Python", Icon: SiPython, color: "#3776AB", tag: "AI & Backend" },
-  { label: "FastAPI", Icon: SiFastapi, color: "#009688", tag: "REST APIs" },
-  { label: "Node.js", Icon: SiNodedotjs, color: "#5fa04e", tag: "Runtime" },
-  { label: "React", Icon: SiReact, color: "#61dafb", tag: "Frontend" },
-  { label: "Next.js", Icon: SiNextdotjs, color: "var(--app-text)", tag: "Full-Stack" },
+  { label: "JavaScript", Icon: SiJavascript, color: "#f7df1e", tag: "Core Language" },
+  { label: "TypeScript", Icon: SiTypescript, color: "#3178c6", tag: "Type Safety" },
+  { label: "React 19", Icon: SiReact, color: "#61dafb", tag: "UI Components" },
+  { label: "Next.js", Icon: SiNextdotjs, color: "var(--app-text)", tag: "Full-Stack React" },
+  { label: "Node.js", Icon: SiNodedotjs, color: "#5fa04e", tag: "Backend Runtime" },
   { label: "Express", Icon: SiExpress, color: "var(--app-text)", tag: "API Framework" },
   { label: "MongoDB", Icon: SiMongodb, color: "#47a248", tag: "NoSQL Database" },
-  { label: "Tailwind", Icon: SiTailwindcss, color: "#38bdf8", tag: "Styling" },
-  { label: "JavaScript", Icon: SiJavascript, color: "#f7df1e", tag: "Core Language" },
+  { label: "Tailwind CSS", Icon: SiTailwindcss, color: "#38bdf8", tag: "Component Styling" },
   { label: "Git & GitHub", Icon: SiGit, color: "#f05032", tag: "Version Control" },
-  { label: "HTML5", Icon: SiHtml5, color: "#e34f26", tag: "Markup" },
+  { label: "PostgreSQL", Icon: SiPostgresql, color: "#4169e1", tag: "Relational DB" },
+  { label: "HTML5", Icon: SiHtml5, color: "#e34f26", tag: "Semantic Markup" },
   { label: "CSS3", Icon: SiCss, color: "#1572b6", tag: "Stylesheets" },
 ];
 
@@ -59,7 +58,7 @@ const aiPillars = [
     color: "#D97706",
     badge: "Claude 3.5 & GPT-4o",
     description:
-      "Engineers prompt pipelines, structured JSON function calling, context window optimization, and real-time Server-Sent Event (SSE) streaming responses.",
+      "Engineers prompt pipelines, structured JSON function calling, context window optimization, and real-time Server-Sent Event (SSE) streaming responses in JavaScript & TypeScript.",
     tags: ["Claude API", "OpenAI", "Prompt Engineering", "Token Optimization"],
   },
   {
@@ -72,13 +71,13 @@ const aiPillars = [
     tags: ["Agentic Workflows", "Playwright Stealth", "Task Orchestration", "Async Workers"],
   },
   {
-    title: "High-Throughput REST APIs",
+    title: "Full-Stack JS & API Architecture",
     icon: Network,
     color: "#06B6D4",
-    badge: "FastAPI & Python",
+    badge: "Node.js & Next.js",
     description:
-      "Designs non-blocking asynchronous RESTful endpoints with Pydantic validation, OpenAPI documentation, connection pooling, and JWT authorization.",
-    tags: ["FastAPI", "AsyncIO", "Pydantic", "REST Architecture", "SSE Streaming"],
+      "Designs non-blocking asynchronous JavaScript/TypeScript RESTful endpoints, Next.js API Routes, Server Actions, JWT authorization, and SSE streaming.",
+    tags: ["Node.js", "Express", "TypeScript", "REST Architecture", "SSE Streaming"],
   },
   {
     title: "AI-Powered Velocity & Tooling",
@@ -93,7 +92,7 @@ const aiPillars = [
 
 /* ── Currently Deepening ── */
 const currentlyLearning = [
-  { label: "LangChain & Vector RAG", Icon: SiPython, color: "#3776AB", detail: "Document embeddings & vector search" },
+  { label: "LangChain.js & Vector RAG", Icon: BrainCircuit, color: "#10B981", detail: "JS embeddings & semantic retrieval" },
   { label: "PostgreSQL & pgvector", Icon: SiPostgresql, color: "#4169e1", detail: "Relational data & similarity indexes" },
   { label: "OpenAI Realtime API", Icon: SiOpenai, color: "#10a37f", detail: "Low-latency bidirectional streaming" },
 ];
@@ -116,7 +115,7 @@ export function TechStackShowcase() {
           <div className="flex items-center gap-2">
             <BrainCircuit className="size-5 text-emerald-400 animate-pulse" aria-hidden="true" />
             <h3 className="text-base font-bold text-[var(--app-text)]">
-              AI, LLM & Python REST API Specialization
+              Full-Stack JavaScript & AI Engineering Specialization
             </h3>
           </div>
           <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-semibold text-emerald-400">

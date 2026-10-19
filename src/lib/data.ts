@@ -53,8 +53,8 @@ export type Project = {
 export const systemProfile = {
   developer: "Online",
   name: "Nurul Shaikh",
-  role: "Full-Stack & AI Systems Developer · Software Architect",
-  currentFocus: ["Python & FastAPI", "LLMs & Agentic AI", "Node.js & Next.js", "Scalable REST APIs"],
+  role: "Full-Stack & AI Dev Engineer",
+  currentFocus: ["JavaScript & TypeScript", "React & Next.js Components", "Full-Stack AI Engineering", "Node.js & Scalable APIs"],
   availability: "Open for Projects & Hiring",
   email: "shaikhnurul8200@gmail.com",
   socials: {
@@ -78,8 +78,8 @@ export const dashboardWidgets = [
   },
   {
     label: "Current Focus",
-    value: "Python, LLMs & AI",
-    detail: "FastAPI, REST APIs, Claude",
+    value: "Full-Stack & AI Dev",
+    detail: "JavaScript, Next.js, React, LLMs",
   },
   {
     label: "Last Updated",
@@ -92,20 +92,20 @@ export const skills: SkillGroup[] = [
   {
     title: "AI & LLM Development",
     level: "Advanced",
-    items: ["Python", "LLMs", "Claude API", "OpenAI API", "Autonomous Agents", "Prompt Engineering", "REST APIs", "FastAPI"],
+    items: ["JavaScript", "TypeScript", "LLMs", "Claude API", "OpenAI API", "Autonomous Agents", "Prompt Engineering", "Vercel AI SDK"],
     signal: "Engineers autonomous multi-agent pipelines, intelligent scrapers, prompt workflows, and streaming AI architectures.",
   },
   {
     title: "Backend & Systems",
     level: "Advanced",
-    items: ["Python", "FastAPI", "Node.js", "Express", "REST APIs", "JWT Auth", "SSE Streaming", "Validation"],
+    items: ["Node.js", "Express", "Next.js APIs", "TypeScript", "REST APIs", "JWT Auth", "SSE Streaming", "Async Architecture"],
     signal: "Architects scalable RESTful APIs with clean MVC patterns, robust validation, and asynchronous concurrency.",
   },
   {
-    title: "Frontend",
+    title: "Frontend & Components",
     level: "Advanced",
-    items: ["HTML", "CSS", "Tailwind", "JavaScript", "React", "Next.js"],
-    signal: "Builds fast interfaces with structured, reusable components.",
+    items: ["JavaScript (ES6+)", "TypeScript", "React 19", "Next.js", "Reusable UI Components", "Tailwind CSS", "HTML5", "CSS3"],
+    signal: "Builds fast, responsive interfaces with structured, modular components and smooth interactions.",
   },
   {
     title: "Database",
@@ -1130,11 +1130,11 @@ export const certificates = [
 
 export const resumeOverview = {
   summary:
-    "Results-driven Web Developer & AI Systems Engineer with 1+ year of professional experience building scalable REST APIs, integrating databases, deploying LLM agents, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects including rishtawala.com and sevika.in.",
+    "Results-driven Full-Stack & AI Dev Engineer with 1+ year of professional experience building scalable JavaScript and TypeScript web architectures, React/Next.js interfaces, integrating databases, deploying LLM agents, and architecting secure API systems.",
   education:
     "Diploma in Computer Science Engineering (Government Polytechnic / Technical Institute · Gujarat Board of Technical Education GBTE, 2024–2027 Final Year).",
   skills:
-    "Server-Side (Python, FastAPI, Node.js, Express, REST APIs), AI & LLMs (Claude API, OpenAI, Autonomous Agents, Prompt Design), Frontend (React 19, Next.js, Three.js, WebGL, Tailwind), Databases (MongoDB, PostgreSQL, MySQL, SQLite).",
+    "JavaScript & TypeScript, React 19, Next.js, Node.js, Express, REST APIs, AI & LLMs (Claude API, OpenAI, Autonomous Agents, Prompt Design), Three.js, WebGL, Tailwind CSS, Databases (MongoDB, PostgreSQL, MySQL).",
   experience:
     "Freelance Full-Stack Developer (2025–2026) + Web Developer Intern at Yuga Yatra (Jun 1 – Aug 1, 2025).",
   achievements:
@@ -1144,7 +1144,7 @@ export const resumeOverview = {
 export const resumeDetails = {
   header: {
     name: "Nurul Shaikh",
-    title: "FULL-STACK & AI DEVELOPER · FREELANCE & REMOTE",
+    title: "FULL-STACK & AI DEV ENGINEER · FREELANCE & REMOTE",
     portfolio: "nurulos.vercel.app",
     email: "shaikhnurul8200@gmail.com",
     phone: "+91 9274490242",
@@ -1153,23 +1153,23 @@ export const resumeDetails = {
     location: "Navsari, Gujarat, India",
   },
   summary:
-    "Results-driven Full-Stack & AI Developer with 1+ year of professional experience building scalable REST APIs, integrating databases, deploying LLM agents, and architecting secure web systems. Completed an internship at Yuga Yatra, delivering production-grade projects. Builds full-stack applications spanning AI-agentic pipelines, 3D WebGL interfaces, and rural governance portals. Actively uses AI-powered IDEs — Claude Code, Cursor, Trae, Codex, and Aider — to accelerate development velocity, reduce boilerplate, and ship higher-quality code in less time. Open to remote freelance contracts and long-term engagements.",
+    "Results-driven Full-Stack & AI Dev Engineer with 1+ year of professional experience building scalable JavaScript and TypeScript web architectures, reusable React components, Next.js applications, deploying LLM agents, and architecting secure REST APIs. Completed an internship at Yuga Yatra, delivering production-grade projects. Builds full-stack applications spanning AI-agentic pipelines, 3D WebGL interfaces, and rural governance portals. Actively uses AI-powered IDEs — Claude Code, Cursor, Trae, Codex, and Aider — to accelerate development velocity, reduce boilerplate, and ship higher-quality code in less time. Open to remote freelance contracts and long-term engagements.",
   technicalSkills: [
     {
       category: "Server-Side & APIs",
-      skills: ["Python", "FastAPI", "Node.js", "Express.js", "RESTful API Architecture", "MVC Design", "SSE Streaming"],
+      skills: ["JavaScript", "TypeScript", "Node.js", "Express.js", "Next.js APIs", "RESTful API Architecture", "MVC Design", "SSE Streaming"],
     },
     {
       category: "AI & LLM Engineering",
       skills: ["LLMs (Large Language Models)", "Anthropic Claude API", "OpenAI API", "Autonomous Multi-Agent Pipelines", "Prompt Engineering", "Playwright Automation"],
     },
     {
-      category: "Frontend",
-      skills: ["React 19", "Next.js 15", "Three.js", "WebGL", "Tailwind CSS", "Vite", "HTML5", "CSS3"],
+      category: "Frontend & Components",
+      skills: ["JavaScript (ES6+)", "TypeScript", "React 19", "Next.js 15", "Component Architecture", "Three.js", "WebGL", "Tailwind CSS"],
     },
     {
       category: "Databases",
-      skills: ["MongoDB", "Mongoose", "MySQL", "PostgreSQL", "SQLite", "aiosqlite"],
+      skills: ["MongoDB", "Mongoose", "MySQL", "PostgreSQL", "SQLite"],
     },
     {
       category: "Authentication",
